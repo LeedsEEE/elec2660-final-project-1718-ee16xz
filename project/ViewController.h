@@ -7,8 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HomeViewController.h"
+@interface ViewController : UIViewController<UIPickerViewDataSource,UIPickerViewDelegate,UITextFieldDelegate>
 
-@interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *nametext;
+
+@property (weak, nonatomic) IBOutlet UIPickerView *GenderPickerView;
+
+- (IBAction)savebutton:(id)sender;
+
+
 
 
 @end
