@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 @interface information : NSObject
 
+@property (nonatomic,strong) NSArray *colorarray;
+@property (nonatomic,strong) NSArray *numberarray;
 @end

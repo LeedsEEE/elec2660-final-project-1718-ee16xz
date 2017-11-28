@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "information.h"
 
 @interface game1ViewController : UIViewController
 
@@ -25,4 +26,6 @@
 - (IBAction)answerB:(id)sender;
 - (IBAction)answerC:(id)sender;
 - (IBAction)answerD:(id)sender;
+
+@property (strong,nonatomic) information *data;
 @end
