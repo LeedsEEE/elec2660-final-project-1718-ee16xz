@@ -195,7 +195,7 @@
     NSInteger value1_;
     value1_ = self.value + 3;
     NSInteger value2_;
-    value2_ = (self.value/2)+4;
+    value2_ = self.value + 2;
     NSInteger value3_;
     value3_ = self.value - 2;
     
@@ -232,6 +232,7 @@
 
 }
 
+#pragma mark button A is pressed
 - (IBAction)answerA:(id)sender {
     //if buttona is pressed, four answer buttons are hidden, and three labels appear with remember button
     self.buttona.hidden = true;
@@ -243,7 +244,29 @@
     self.secondlabel.hidden = false;
     self.thirdlabel.hidden = false;
     self.buttonremember.hidden = false;
+    
+    //information(text and background) of the label
+    //random backgroundcolorindex for each label
+    NSUInteger colora = arc4random() % 2;   //randomly generate the integers from 0~1;
+    NSUInteger colorb = arc4random() % 2;
+    NSUInteger colorc = arc4random() % 2;
+    //random textindex for each label
+    NSUInteger texta = arc4random() % 10;
+    NSUInteger textb = arc4random() % 10;
+    NSUInteger textc = arc4random() % 10;
+    
+    //set the backgroundcolor
+    self.firstlabel.backgroundColor = [self.data.colorarray objectAtIndex:colora];
+    self.secondlabel.backgroundColor = [self.data.colorarray objectAtIndex:colorb];
+    self.thirdlabel.backgroundColor = [self.data.colorarray objectAtIndex:colorc];
+    
+    //set the text
+    self.firstlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:texta]];
+    self.secondlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:textb]];
+    self.thirdlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:textc]];
 }
+
+#pragma mark button B is pressed
 - (IBAction)answerB:(id)sender {
     //if buttonb is pressed, four answer buttons are hidden, and three labels appear with remember button
     self.buttona.hidden = true;
@@ -255,7 +278,29 @@
     self.secondlabel.hidden = false;
     self.thirdlabel.hidden = false;
     self.buttonremember.hidden = false;
+    
+    //information(text and background) of the label
+    //random backgroundcolorindex for each label
+    NSUInteger colora = arc4random() % 2;   //randomly generate the integers from 0~1;
+    NSUInteger colorb = arc4random() % 2;
+    NSUInteger colorc = arc4random() % 2;
+    //random textindex for each label
+    NSUInteger texta = arc4random() % 10;
+    NSUInteger textb = arc4random() % 10;
+    NSUInteger textc = arc4random() % 10;
+    
+    //set the backgroundcolor
+    self.firstlabel.backgroundColor = [self.data.colorarray objectAtIndex:colora];
+    self.secondlabel.backgroundColor = [self.data.colorarray objectAtIndex:colorb];
+    self.thirdlabel.backgroundColor = [self.data.colorarray objectAtIndex:colorc];
+    
+    //set the text
+    self.firstlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:texta]];
+    self.secondlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:textb]];
+    self.thirdlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:textc]];
 }
+
+#pragma mark button C is pressed
 - (IBAction)answerC:(id)sender {
     //if buttonc is pressed, four answer buttons are hidden, and three labels appear with remember button
     self.buttona.hidden = true;
@@ -267,7 +312,29 @@
     self.secondlabel.hidden = false;
     self.thirdlabel.hidden = false;
     self.buttonremember.hidden = false;
+    
+    //information(text and background) of the label
+    //random backgroundcolorindex for each label
+    NSUInteger colora = arc4random() % 2;   //randomly generate the integers from 0~1;
+    NSUInteger colorb = arc4random() % 2;
+    NSUInteger colorc = arc4random() % 2;
+    //random textindex for each label
+    NSUInteger texta = arc4random() % 10;
+    NSUInteger textb = arc4random() % 10;
+    NSUInteger textc = arc4random() % 10;
+    
+    //set the backgroundcolor
+    self.firstlabel.backgroundColor = [self.data.colorarray objectAtIndex:colora];
+    self.secondlabel.backgroundColor = [self.data.colorarray objectAtIndex:colorb];
+    self.thirdlabel.backgroundColor = [self.data.colorarray objectAtIndex:colorc];
+    
+    //set the text
+    self.firstlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:texta]];
+    self.secondlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:textb]];
+    self.thirdlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:textc]];
 }
+
+# pragma mark button D is pressed
 - (IBAction)answerD:(id)sender {
     //if buttond is pressed, four answer buttons are hidden, and three labels appear with remember button
     self.buttona.hidden = true;
@@ -279,6 +346,26 @@
     self.secondlabel.hidden = false;
     self.thirdlabel.hidden = false;
     self.buttonremember.hidden = false;
+    
+    //information(text and background) of the label
+    //random backgroundcolorindex for each label
+    NSUInteger colora = arc4random() % 2;   //randomly generate the integers from 0~1;
+    NSUInteger colorb = arc4random() % 2;
+    NSUInteger colorc = arc4random() % 2;
+    //random textindex for each label
+    NSUInteger texta = arc4random() % 10;
+    NSUInteger textb = arc4random() % 10;
+    NSUInteger textc = arc4random() % 10;
+    
+    //set the backgroundcolor
+    self.firstlabel.backgroundColor = [self.data.colorarray objectAtIndex:colora];
+    self.secondlabel.backgroundColor = [self.data.colorarray objectAtIndex:colorb];
+    self.thirdlabel.backgroundColor = [self.data.colorarray objectAtIndex:colorc];
+    
+    //set the text
+    self.firstlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:texta]];
+    self.secondlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:textb]];
+    self.thirdlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:textc]];
 }
 
 -(unsigned long)value {
