@@ -9,6 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface information : NSObject
-@property(nonatomic,strong) NSArray *genderarray;
-@property(nonatomic,strong) NSString *name;
+
 @end

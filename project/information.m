@@ -10,17 +10,6 @@
 
 @implementation information
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        self.genderarray = [NSArray arrayWithObjects:
-        [NSString stringWithFormat:@"Female"],
-        [NSString stringWithFormat:@"Male"],
-                            nil];
-    }
-    return self;
-}
 
 
 @end
