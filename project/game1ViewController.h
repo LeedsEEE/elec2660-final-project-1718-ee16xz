@@ -11,6 +11,9 @@
 
 @interface game1ViewController : UIViewController
 
+@property (nonatomic)NSUInteger value;
+@property (strong,nonatomic) NSMutableArray *answerarray;
+
 @property (weak, nonatomic) IBOutlet UIButton *buttona;
 @property (weak, nonatomic) IBOutlet UIButton *buttonb;
 @property (weak, nonatomic) IBOutlet UIButton *buttonc;
@@ -28,4 +31,5 @@
 - (IBAction)answerD:(id)sender;
 
 @property (strong,nonatomic) information *data;
+-(unsigned long)value;
 @end
