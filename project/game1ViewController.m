@@ -1,34 +1,28 @@
 //
-//  HomeViewController.m
+//  game1ViewController.m
 //  project
 //
-//  Created by 我好酷😎 on 2017/11/23.
+//  Created by 我好酷😎 on 2017/11/28.
 //  Copyright © 2017年 University of Leeds. All rights reserved.
 //
 
-#import "HomeViewController.h"
-@interface HomeViewController ()
+#import "game1ViewController.h"
+
+@interface game1ViewController ()
 
 @end
 
-@implementation HomeViewController
+@implementation game1ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    self.Namelabel.text = [NSString stringWithFormat:@"%@",_name1];
-    
-/*  self.Namelabel.text = [NSString stringWithFormat:@"%@",self.nametext.text];
-*/
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 
 /*
 #pragma mark - Navigation

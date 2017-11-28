@@ -1,18 +1,18 @@
 //
-//  GameViewController.m
+//  game2ViewController.m
 //  project
 //
-//  Created by 我好酷😎 on 2017/11/23.
+//  Created by 我好酷😎 on 2017/11/28.
 //  Copyright © 2017年 University of Leeds. All rights reserved.
 //
 
-#import "GameViewController.h"
+#import "game2ViewController.h"
 
-@interface GameViewController ()
+@interface game2ViewController ()
 
 @end
 
-@implementation GameViewController
+@implementation game2ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

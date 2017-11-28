@@ -8,16 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		180630491FB06F6C009A27C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 180630481FB06F6C009A27C4 /* AppDelegate.m */; };
-		1806304C1FB06F6C009A27C4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1806304B1FB06F6C009A27C4 /* ViewController.m */; };
 		1806304F1FB06F6C009A27C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1806304D1FB06F6C009A27C4 /* Main.storyboard */; };
 		180630511FB06F6C009A27C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 180630501FB06F6C009A27C4 /* Assets.xcassets */; };
 		180630541FB06F6C009A27C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180630521FB06F6C009A27C4 /* LaunchScreen.storyboard */; };
 		180630571FB06F6C009A27C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 180630561FB06F6C009A27C4 /* main.m */; };
 		180630611FB06F6C009A27C4 /* projectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 180630601FB06F6C009A27C4 /* projectTests.m */; };
 		1806306C1FB06F6C009A27C4 /* projectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1806306B1FB06F6C009A27C4 /* projectUITests.m */; };
-		180D79D81FC6E46F00CDFF3D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D79D71FC6E46F00CDFF3D /* HomeViewController.m */; };
-		180D79DB1FC6E90700CDFF3D /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D79DA1FC6E90700CDFF3D /* GameViewController.m */; };
 		180D79DE1FC757B300CDFF3D /* information.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D79DD1FC757B300CDFF3D /* information.m */; };
+		18E004961FCDABC8005CC3EC /* game1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E004951FCDABC8005CC3EC /* game1ViewController.m */; };
+		18E004991FCDABD7005CC3EC /* game2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E004981FCDABD7005CC3EC /* game2ViewController.m */; };
+		18E0049B1FCDACD9005CC3EC /* gamerules.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E0049A1FCDACBB005CC3EC /* gamerules.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +41,6 @@
 		180630441FB06F6C009A27C4 /* project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		180630471FB06F6C009A27C4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		180630481FB06F6C009A27C4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1806304A1FB06F6C009A27C4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1806304B1FB06F6C009A27C4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1806304E1FB06F6C009A27C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		180630501FB06F6C009A27C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		180630531FB06F6C009A27C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,12 +52,13 @@
 		180630671FB06F6C009A27C4 /* projectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = projectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1806306B1FB06F6C009A27C4 /* projectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = projectUITests.m; sourceTree = "<group>"; };
 		1806306D1FB06F6C009A27C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		180D79D61FC6E46F00CDFF3D /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		180D79D71FC6E46F00CDFF3D /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		180D79D91FC6E90700CDFF3D /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
-		180D79DA1FC6E90700CDFF3D /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		180D79DC1FC757B300CDFF3D /* information.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = information.h; sourceTree = "<group>"; };
 		180D79DD1FC757B300CDFF3D /* information.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = information.m; sourceTree = "<group>"; };
+		18E004941FCDABC8005CC3EC /* game1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = game1ViewController.h; sourceTree = "<group>"; };
+		18E004951FCDABC8005CC3EC /* game1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = game1ViewController.m; sourceTree = "<group>"; };
+		18E004971FCDABD7005CC3EC /* game2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = game2ViewController.h; sourceTree = "<group>"; };
+		18E004981FCDABD7005CC3EC /* game2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = game2ViewController.m; sourceTree = "<group>"; };
+		18E0049A1FCDACBB005CC3EC /* gamerules.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gamerules.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,16 +110,15 @@
 			isa = PBXGroup;
 			children = (
 				1806304D1FB06F6C009A27C4 /* Main.storyboard */,
+				18E0049A1FCDACBB005CC3EC /* gamerules.png */,
+				18E004941FCDABC8005CC3EC /* game1ViewController.h */,
+				18E004951FCDABC8005CC3EC /* game1ViewController.m */,
+				18E004971FCDABD7005CC3EC /* game2ViewController.h */,
+				18E004981FCDABD7005CC3EC /* game2ViewController.m */,
 				180D79DC1FC757B300CDFF3D /* information.h */,
 				180D79DD1FC757B300CDFF3D /* information.m */,
 				180630471FB06F6C009A27C4 /* AppDelegate.h */,
 				180630481FB06F6C009A27C4 /* AppDelegate.m */,
-				1806304A1FB06F6C009A27C4 /* ViewController.h */,
-				1806304B1FB06F6C009A27C4 /* ViewController.m */,
-				180D79D71FC6E46F00CDFF3D /* HomeViewController.m */,
-				180D79D61FC6E46F00CDFF3D /* HomeViewController.h */,
-				180D79D91FC6E90700CDFF3D /* GameViewController.h */,
-				180D79DA1FC6E90700CDFF3D /* GameViewController.m */,
 				180630501FB06F6C009A27C4 /* Assets.xcassets */,
 				180630521FB06F6C009A27C4 /* LaunchScreen.storyboard */,
 				180630551FB06F6C009A27C4 /* Info.plist */,
@@ -253,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18E0049B1FCDACD9005CC3EC /* gamerules.png in Resources */,
 				180630541FB06F6C009A27C4 /* LaunchScreen.storyboard in Resources */,
 				180630511FB06F6C009A27C4 /* Assets.xcassets in Resources */,
 				1806304F1FB06F6C009A27C4 /* Main.storyboard in Resources */,
@@ -280,12 +279,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				180D79DB1FC6E90700CDFF3D /* GameViewController.m in Sources */,
-				1806304C1FB06F6C009A27C4 /* ViewController.m in Sources */,
+				18E004991FCDABD7005CC3EC /* game2ViewController.m in Sources */,
 				180630571FB06F6C009A27C4 /* main.m in Sources */,
 				180630491FB06F6C009A27C4 /* AppDelegate.m in Sources */,
+				18E004961FCDABC8005CC3EC /* game1ViewController.m in Sources */,
 				180D79DE1FC757B300CDFF3D /* information.m in Sources */,
-				180D79D81FC6E46F00CDFF3D /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
