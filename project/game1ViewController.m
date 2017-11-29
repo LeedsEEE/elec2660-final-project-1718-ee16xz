@@ -18,13 +18,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // set the time limit of the game: 30s
-    self.totaltime = 30;
+    self.runtime = 30;
     // create the timer - timeinterval: count every 1s;
     //                    target:timer self;
     //                    selector:the message to send to target when the timer fires
     //                    repeat: repeat everytime when load the view
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerfire:) userInfo:nil repeats:YES];
     
+    //set the all results to 0
+    self.totaltimes = 0;
+    self.correcttimes = 0;
+    self.wrongtimes = 0;
+    self.accuracy = 0;
     
     //hidden four answers button
     //show three labels and remember button
@@ -89,17 +94,17 @@
     self.buttond.hidden = false;
   
     //create another three wrong values
-    NSUInteger value1_;
-    value1_ = self.value + 3;
-    NSUInteger value2_;
-    value2_ = self.value + 2;
-    NSUInteger value3_;
-    value3_ = self.value - 2;
+    NSUInteger wrongvalue1_;
+    wrongvalue1_ = self.value + 3;
+    NSUInteger wrongvalue2_;
+    wrongvalue2_ = self.value + 2;
+    NSUInteger wrongvalue3_;
+    wrongvalue3_ = self.value - 2;
     
     self.answerarray = [NSMutableArray arrayWithObjects:[NSString stringWithFormat: @"%ld",self.value],
-                        [NSString stringWithFormat:@"%ld",value1_],
-                        [NSString stringWithFormat:@"%ld",value2_],
-                        [NSString stringWithFormat:@"%ld",value3_],
+                        [NSString stringWithFormat:@"%ld",wrongvalue1_],
+                        [NSString stringWithFormat:@"%ld",wrongvalue2_],
+                        [NSString stringWithFormat:@"%ld",wrongvalue3_],
                         nil];
     //I've learnt how to randomly generate the titles for four answer buttons without repeating on the following website:https://stackoverflow.com/questions/14431873/how-to-generate-random-values-from-an-array-without-repeating-any-in-objective-c
     
@@ -125,22 +130,24 @@
         [_answerarray removeObjectAtIndex:ansd];
         
     }
-
     NSLog(@"right answer is %ld",self.value);
-    
- /*   NSLog(@"%@",self.titlea);
-    NSLog(@"%@",[NSString stringWithFormat:@"%ld",self.value]);*/
-    
-
 }
+
 
 #pragma mark button A is pressed
 - (IBAction)answerA:(id)sender {
-    NSInteger i = [self.titlea integerValue];
-    NSInteger j = [[NSString stringWithFormat:@"%ld",self.value] integerValue];
-    if (i == j){
-        NSLog(@"yes");
+    //check if number shown on buttona is right
+    NSInteger a = [self.titlea integerValue];
+    NSInteger A = [[NSString stringWithFormat:@"%ld",self.value] integerValue];
+    if (a == A){
+        self.correcttimes ++;
+        self.correcttimes = self.correcttimes;
+        NSLog(@"buttona is correct");
+    }else{
+        self.wrongtimes ++;
+        self.wrongtimes = self.wrongtimes;
     }
+    
     //if buttona is pressed, four answer buttons are hidden, and three labels appear with remember button
     self.buttona.hidden = true;
     self.buttonb.hidden = true;
@@ -171,14 +178,22 @@
     self.firstlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:texta]];
     self.secondlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:textb]];
     self.thirdlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:textc]];
- 
-
-   /* NSLog(@"%@",self.buttona.titleLabel.text);*/
-    
 }
 
 #pragma mark button B is pressed
 - (IBAction)answerB:(id)sender {
+    //check if number shown on buttonb is right
+    NSInteger b = [self.titleb integerValue];
+    NSInteger B = [[NSString stringWithFormat:@"%ld",self.value] integerValue];
+    if (b == B){
+        self.correcttimes ++;
+        self.correcttimes = self.correcttimes;
+        NSLog(@"buttonb is correct");
+    }else{
+        self.wrongtimes ++;
+        self.wrongtimes = self.wrongtimes;
+    }
+    
     //if buttonb is pressed, four answer buttons are hidden, and three labels appear with remember button
     self.buttona.hidden = true;
     self.buttonb.hidden = true;
@@ -213,6 +228,18 @@
 
 #pragma mark button C is pressed
 - (IBAction)answerC:(id)sender {
+    //check if number shown on buttonc is right
+    NSInteger c = [self.titlec integerValue];
+    NSInteger C = [[NSString stringWithFormat:@"%ld",self.value] integerValue];
+    if (c == C){
+        self.correcttimes ++;
+        self.correcttimes = self.correcttimes;
+        NSLog(@"buttonc is correct");
+    }else{
+        self.wrongtimes ++;
+        self.wrongtimes = self.wrongtimes;
+    }
+    
     //if buttonc is pressed, four answer buttons are hidden, and three labels appear with remember button
     self.buttona.hidden = true;
     self.buttonb.hidden = true;
@@ -247,6 +274,18 @@
 
 # pragma mark button D is pressed
 - (IBAction)answerD:(id)sender {
+    //check if number shown on buttond is right
+    NSInteger d = [self.titled integerValue];
+    NSInteger D = [[NSString stringWithFormat:@"%ld",self.value] integerValue];
+    if (d == D){
+        self.correcttimes ++;
+        self.correcttimes = self.correcttimes;
+        NSLog(@"buttond is correct");
+    }else{
+        self.wrongtimes ++;
+        self.wrongtimes = self.wrongtimes;
+    }
+    
     //if buttond is pressed, four answer buttons are hidden, and three labels appear with remember button
     self.buttona.hidden = true;
     self.buttonb.hidden = true;
@@ -376,15 +415,29 @@
 
 //timer method
 -(void) timerfire:(NSTimer *)timer{
-    NSLog(@"timer fired");
-    NSLog(@"%ld",self.totaltime);
-    self.totaltime --;
-    self.timerlabel.text = [NSString stringWithFormat:@"%ld",_totaltime];
-    if (self.totaltime == 0) {
+    self.runtime --;
+    self.timerlabel.text = [NSString stringWithFormat:@"%ld",_runtime];
+    if (self.runtime == 0) {
         [timer invalidate];
         NSLog(@"timer stop");
+        NSLog(@"%ld",self.correcttimes);
+        NSLog(@"%ld",self.wrongtimes);
+        //when the timer is stopped, goes to the next view controller
         [self performSegueWithIdentifier:@"showresults" sender:nil];
     }
 }
 
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    self.totaltimes = self.correcttimes + self.wrongtimes;
+    self.accuracy = (((float)self.correcttimes) / ((float)self.totaltimes))*100.00;
+    
+    game2ViewController *g2 = [segue destinationViewController];
+    g2.right = [NSString stringWithFormat:@"%ld",self.correcttimes];
+    g2.wrong = [NSString stringWithFormat:@"%ld",self.wrongtimes];
+    g2.total = [NSString stringWithFormat:@"%ld",self.totaltimes];
+    g2.accuracy = [NSString stringWithFormat:@"%.2f",self.accuracy];
+}
 @end

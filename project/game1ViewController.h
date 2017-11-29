@@ -12,6 +12,11 @@
 @interface game1ViewController : UIViewController
 
 @property (nonatomic)NSUInteger value;
+@property NSInteger correcttimes;
+@property NSInteger wrongtimes;
+@property NSInteger totaltimes;
+@property float accuracy;
+
 @property (strong,nonatomic) NSMutableArray *answerarray;
 
 @property NSString * titlea;
@@ -37,7 +42,8 @@
 - (IBAction)answerD:(id)sender;
 
 @property (strong,nonatomic) NSTimer *timer;
-@property NSInteger totaltime;
+@property NSInteger runtime;
+
 @property (strong,nonatomic) information *data;
 -(unsigned long)value;
 

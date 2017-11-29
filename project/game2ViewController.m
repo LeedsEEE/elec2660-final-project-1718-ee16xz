@@ -17,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.totallabel.text = self.total;
+    self.rightlabel.text = self.right;
+    self.wronglabel.text = self.wrong;
+    self.accuracylabel.text = self.accuracy;
 }
 
 - (void)didReceiveMemoryWarning {
