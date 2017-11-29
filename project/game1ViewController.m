@@ -7,7 +7,8 @@
 //
 
 #import "game1ViewController.h"
-#import "information.h"
+
+
 @interface game1ViewController ()
 
 @end
@@ -100,7 +101,8 @@
                         [NSString stringWithFormat:@"%ld",value2_],
                         [NSString stringWithFormat:@"%ld",value3_],
                         nil];
-  //randomly generate the titles of four answer buttons without repeating
+    //I've learnt how to randomly generate the titles for four answer buttons without repeating on the following website:https://stackoverflow.com/questions/14431873/how-to-generate-random-values-from-an-array-without-repeating-any-in-objective-c
+    
     for (int i = 0; i< _answerarray.count; i++) {
         NSUInteger ansa = arc4random()%[_answerarray count];
         self.titlea = [self.answerarray objectAtIndex:ansa];
@@ -381,6 +383,7 @@
     if (self.totaltime == 0) {
         [timer invalidate];
         NSLog(@"timer stop");
+        [self performSegueWithIdentifier:@"showresults" sender:nil];
     }
 }
 

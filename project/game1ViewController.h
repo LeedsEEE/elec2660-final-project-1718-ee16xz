@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "information.h"
-
+#import "game2ViewController.h"
 @interface game1ViewController : UIViewController
 
 @property (nonatomic)NSUInteger value;

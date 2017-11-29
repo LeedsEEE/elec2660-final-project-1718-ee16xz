@@ -108,7 +108,7 @@
                         <outlet property="secondlabel" destination="5V3-Zg-uGz" id="qXs-Hv-1wt"/>
                         <outlet property="thirdlabel" destination="zBk-p2-5iG" id="YZU-Na-iOB"/>
                         <outlet property="timerlabel" destination="7KS-2Z-fMZ" id="CZ5-dT-6WW"/>
-                        <segue destination="Nup-HR-S3E" kind="show" id="cUu-TG-X48"/>
+                        <segue destination="Nup-HR-S3E" kind="show" identifier="showresults" id="cUu-TG-X48"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ucj-7b-3fe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -122,6 +122,12 @@
                     <view key="view" contentMode="scaleToFill" id="zEX-CV-DEc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gqM-8z-ygz">
+                                <rect key="frame" x="164" y="457" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="WIQ-iz-4Dl"/>
                     </view>
