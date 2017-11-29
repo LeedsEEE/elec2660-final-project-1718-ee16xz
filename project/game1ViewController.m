@@ -25,155 +25,44 @@
     
     //initilize the information class
     self.data = [[information alloc] init];
-    
-    //information(text and background) of the label  when start the game
-    //random backgroundcolorindex for each label
+ 
+    //set text and background of the label  when start the game
+    //one method of setting the initial random backgroundcolor ----use for loop
+    for (int color = 0; color <_data.colorarray.count ; color++) {
+        int colora = arc4random() %[_data.colorarray count];
+        self.firstlabel.backgroundColor = [self.data.colorarray objectAtIndex:colora];
+        
+        int colorb = arc4random()%[_data.colorarray count];
+        self.secondlabel.backgroundColor = [self.data.colorarray objectAtIndex:colorb];
+     
+        int colorc = arc4random()%[_data.colorarray count];
+        self.thirdlabel.backgroundColor = [self.data.colorarray objectAtIndex:colorc];
+    }
+/*
+   //another method of setting backgroundcolor
     NSUInteger colora = arc4random() % 2;   //randomly generate the integers from 0~1;
     NSUInteger colorb = arc4random() % 2;
     NSUInteger colorc = arc4random() % 2;
+    
+   //set the initial backgroundcolor
+    self.firstlabel.backgroundColor = [self.data.colorarray objectAtIndex:colora];
+    self.secondlabel.backgroundColor = [self.data.colorarray objectAtIndex:colorb];
+    self.thirdlabel.backgroundColor = [self.data.colorarray objectAtIndex:colorc];*/
+    
     //random textindex for each label
     NSUInteger texta = arc4random() % 10;
     NSUInteger textb = arc4random() % 10;
     NSUInteger textc = arc4random() % 10;
-    
-    //set the initial backgroundcolor
-    self.firstlabel.backgroundColor = [self.data.colorarray objectAtIndex:colora];
-    self.secondlabel.backgroundColor = [self.data.colorarray objectAtIndex:colorb];
-    self.thirdlabel.backgroundColor = [self.data.colorarray objectAtIndex:colorc];
-    
     //set the initial text
     self.firstlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:texta]];
     self.secondlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:textb]];
     self.thirdlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:textc]];
-    
-/*    //init the values shown on each label
-    NSInteger A = 0;
-    NSInteger B = 0;
-    NSInteger C = 0;
-    //BBB
-    if (self.firstlabel.backgroundColor == [UIColor brownColor] &&
-        self.secondlabel.backgroundColor == [UIColor brownColor] &&
-        self.thirdlabel.backgroundColor == [UIColor brownColor]) {
-        A = A + [self.firstlabel.text integerValue];
-        B = B + [self.secondlabel.text integerValue];
-        C = C + [self.thirdlabel.text integerValue];
-        self.value = A + B + C;
-        NSLog(@"BBB");
-        NSLog(@"%ld",(long)A);
-        NSLog(@"%ld",(long)B);
-        NSLog(@"%ld",(long)C);
-    }
-    //BBR
-    else if (self.firstlabel.backgroundColor == [UIColor brownColor] &&
-             self.secondlabel.backgroundColor == [UIColor brownColor] &&
-             self.thirdlabel.backgroundColor == [UIColor redColor]){
-        A = A + [self.firstlabel.text integerValue];
-        B = B + [self.secondlabel.text integerValue];
-        C = C - [self.thirdlabel.text integerValue];
-        self.value = A + B + C;
-        NSLog(@"BBR");
-        NSLog(@"%ld",(long)A);
-        NSLog(@"%ld",(long)B);
-        NSLog(@"%ld",(long)C);
-    }
-    //BRB
-    else if (self.firstlabel.backgroundColor == [UIColor brownColor]&&
-             self.secondlabel.backgroundColor == [UIColor redColor] &&
-             self.thirdlabel.backgroundColor == [UIColor brownColor]){
-        A = A + [self.firstlabel.text integerValue];
-        B = B - [self.secondlabel.text integerValue];
-        C = C + [self.thirdlabel.text integerValue];
-        self.value = A + B + C;
-        NSLog(@"BRB");
-        NSLog(@"%ld",(long)A);
-        NSLog(@"%ld",(long)B);
-        NSLog(@"%ld",(long)C);
-    }
-    //BRR
-    else if (self.firstlabel.backgroundColor == [UIColor brownColor]&&
-             self.secondlabel.backgroundColor == [UIColor redColor] &&
-             self.thirdlabel.backgroundColor == [UIColor redColor]){
-        A = A + [self.firstlabel.text integerValue];
-        B = B - [self.secondlabel.text integerValue];
-        C = C - [self.thirdlabel.text integerValue];
-        self.value = A + B + C;
-        NSLog(@"BRR");
-        NSLog(@"%ld",(long)A);
-        NSLog(@"%ld",(long)B);
-        NSLog(@"%ld",(long)C);
-    }
-    //RRR
-    else if (self.firstlabel.backgroundColor == [UIColor redColor]&&
-             self.secondlabel.backgroundColor == [UIColor redColor] &&
-             self.thirdlabel.backgroundColor == [UIColor redColor]){
-        A = A - [self.firstlabel.text integerValue];
-        B = B - [self.secondlabel.text integerValue];
-        C = C - [self.thirdlabel.text integerValue];
-        self.value = A + B + C;
-        NSLog(@"RRR");
-        NSLog(@"%ld",(long)A);
-        NSLog(@"%ld",(long)B);
-        NSLog(@"%ld",(long)C);
-    }
-    //RRB
-    else if (self.firstlabel.backgroundColor == [UIColor redColor]&&
-             self.secondlabel.backgroundColor == [UIColor redColor] &&
-             self.thirdlabel.backgroundColor == [UIColor brownColor]){
-        A = A - [self.firstlabel.text integerValue];
-        B = B - [self.secondlabel.text integerValue];
-        C = C + [self.thirdlabel.text integerValue];
-        self.value = A + B + C;
-        NSLog(@"RRB");
-        NSLog(@"%ld",(long)A);
-        NSLog(@"%ld",(long)B);
-        NSLog(@"%ld",(long)C);
-    }
-    //RBR
-    else if (self.firstlabel.backgroundColor == [UIColor redColor]&&
-             self.secondlabel.backgroundColor == [UIColor brownColor] &&
-             self.thirdlabel.backgroundColor == [UIColor redColor]){
-        A = A - [self.firstlabel.text integerValue];
-        B = B + [self.secondlabel.text integerValue];
-        C = C - [self.thirdlabel.text integerValue];
-        self.value = A + B + C;
-        NSLog(@"RBR");
-        NSLog(@"%ld",(long)A);
-        NSLog(@"%ld",(long)B);
-        NSLog(@"%ld",(long)C);
-    }
-    //RBB
-    else if (self.firstlabel.backgroundColor == [UIColor redColor]&&
-             self.secondlabel.backgroundColor == [UIColor brownColor] &&
-             self.thirdlabel.backgroundColor == [UIColor brownColor]){
-        A = A - [self.firstlabel.text integerValue];
-        B = B + [self.secondlabel.text integerValue];
-        C = C + [self.thirdlabel.text integerValue];
-        self.value = A + B + C;
-        NSLog(@"RBB");
-        NSLog(@"%ld",(long)A);
-        NSLog(@"%ld",(long)B);
-        NSLog(@"%ld",(long)C);
-    }*/
-    
-
-    
-  
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 
 - (IBAction)rememberbuttonpressed:(id)sender {
@@ -188,15 +77,13 @@
     self.buttonb.hidden = false;
     self.buttonc.hidden = false;
     self.buttond.hidden = false;
-    
-    NSLog(@"%ld",self.value);
   
     //create another three wrong values
-    NSInteger value1_;
+    NSUInteger value1_;
     value1_ = self.value + 3;
-    NSInteger value2_;
+    NSUInteger value2_;
     value2_ = self.value + 2;
-    NSInteger value3_;
+    NSUInteger value3_;
     value3_ = self.value - 2;
     
     self.answerarray = [NSMutableArray arrayWithObjects:[NSString stringWithFormat: @"%ld",self.value],
@@ -226,7 +113,7 @@
         [_answerarray removeObjectAtIndex:ansd];
     }
 
-    NSLog(@"%@",self.answerarray);
+    NSLog(@"right answer is %ld",self.value);
     
 
 
@@ -264,6 +151,9 @@
     self.firstlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:texta]];
     self.secondlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:textb]];
     self.thirdlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:textc]];
+    
+    NSLog(@"%@",self.buttona.titleLabel.text);
+    
 }
 
 #pragma mark button B is pressed
@@ -372,110 +262,93 @@
     NSInteger A = 0;
     NSInteger B = 0;
     NSInteger C = 0;
-    //BBB
-    if (self.firstlabel.backgroundColor == [UIColor brownColor] &&
-        self.secondlabel.backgroundColor == [UIColor brownColor] &&
-        self.thirdlabel.backgroundColor == [UIColor brownColor]) {
+    //OOO
+    if (self.firstlabel.backgroundColor == [UIColor orangeColor] &&
+        self.secondlabel.backgroundColor == [UIColor orangeColor] &&
+        self.thirdlabel.backgroundColor == [UIColor orangeColor]) {
         A = A + [self.firstlabel.text integerValue];
         B = B + [self.secondlabel.text integerValue];
         C = C + [self.thirdlabel.text integerValue];
+        self.value = A + B + C;
+        NSLog(@"OOO");
+
+    }
+    //OOB
+    else if (self.firstlabel.backgroundColor == [UIColor orangeColor] &&
+             self.secondlabel.backgroundColor == [UIColor orangeColor] &&
+             self.thirdlabel.backgroundColor == [UIColor blackColor]){
+        A = A + [self.firstlabel.text integerValue];
+        B = B + [self.secondlabel.text integerValue];
+        C = C - [self.thirdlabel.text integerValue];
+        self.value = A + B + C;
+        NSLog(@"OOB");
+
+    }
+    //OBO
+    else if (self.firstlabel.backgroundColor == [UIColor orangeColor]&&
+             self.secondlabel.backgroundColor == [UIColor blackColor] &&
+             self.thirdlabel.backgroundColor == [UIColor orangeColor]){
+        A = A + [self.firstlabel.text integerValue];
+        B = B - [self.secondlabel.text integerValue];
+        C = C + [self.thirdlabel.text integerValue];
+        self.value = A + B + C;
+        NSLog(@"OBO");
+
+    }
+    //OBB
+    else if (self.firstlabel.backgroundColor == [UIColor orangeColor]&&
+             self.secondlabel.backgroundColor == [UIColor blackColor] &&
+             self.thirdlabel.backgroundColor == [UIColor blackColor]){
+        A = A + [self.firstlabel.text integerValue];
+        B = B - [self.secondlabel.text integerValue];
+        C = C - [self.thirdlabel.text integerValue];
+        self.value = A + B + C;
+        NSLog(@"OBB");
+    }
+    //BBB
+    else if (self.firstlabel.backgroundColor == [UIColor blackColor]&&
+             self.secondlabel.backgroundColor == [UIColor blackColor] &&
+             self.thirdlabel.backgroundColor == [UIColor blackColor]){
+        A = A - [self.firstlabel.text integerValue];
+        B = B - [self.secondlabel.text integerValue];
+        C = C - [self.thirdlabel.text integerValue];
         self.value = A + B + C;
         NSLog(@"BBB");
-        NSLog(@"%ld",(long)A);
-        NSLog(@"%ld",(long)B);
-        NSLog(@"%ld",(long)C);
+
     }
-    //BBR
-    else if (self.firstlabel.backgroundColor == [UIColor brownColor] &&
-             self.secondlabel.backgroundColor == [UIColor brownColor] &&
-             self.thirdlabel.backgroundColor == [UIColor redColor]){
-        A = A + [self.firstlabel.text integerValue];
-        B = B + [self.secondlabel.text integerValue];
-        C = C - [self.thirdlabel.text integerValue];
-        self.value = A + B + C;
-        NSLog(@"BBR");
-        NSLog(@"%ld",(long)A);
-        NSLog(@"%ld",(long)B);
-        NSLog(@"%ld",(long)C);
-    }
-    //BRB
-    else if (self.firstlabel.backgroundColor == [UIColor brownColor]&&
-             self.secondlabel.backgroundColor == [UIColor redColor] &&
-             self.thirdlabel.backgroundColor == [UIColor brownColor]){
-        A = A + [self.firstlabel.text integerValue];
-        B = B - [self.secondlabel.text integerValue];
-        C = C + [self.thirdlabel.text integerValue];
-        self.value = A + B + C;
-        NSLog(@"BRB");
-        NSLog(@"%ld",(long)A);
-        NSLog(@"%ld",(long)B);
-        NSLog(@"%ld",(long)C);
-    }
-    //BRR
-    else if (self.firstlabel.backgroundColor == [UIColor brownColor]&&
-             self.secondlabel.backgroundColor == [UIColor redColor] &&
-             self.thirdlabel.backgroundColor == [UIColor redColor]){
-        A = A + [self.firstlabel.text integerValue];
-        B = B - [self.secondlabel.text integerValue];
-        C = C - [self.thirdlabel.text integerValue];
-        self.value = A + B + C;
-        NSLog(@"BRR");
-        NSLog(@"%ld",(long)A);
-        NSLog(@"%ld",(long)B);
-        NSLog(@"%ld",(long)C);
-    }
-    //RRR
-    else if (self.firstlabel.backgroundColor == [UIColor redColor]&&
-             self.secondlabel.backgroundColor == [UIColor redColor] &&
-             self.thirdlabel.backgroundColor == [UIColor redColor]){
-        A = A - [self.firstlabel.text integerValue];
-        B = B - [self.secondlabel.text integerValue];
-        C = C - [self.thirdlabel.text integerValue];
-        self.value = A + B + C;
-        NSLog(@"RRR");
-        NSLog(@"%ld",(long)A);
-        NSLog(@"%ld",(long)B);
-        NSLog(@"%ld",(long)C);
-    }
-    //RRB
-    else if (self.firstlabel.backgroundColor == [UIColor redColor]&&
-             self.secondlabel.backgroundColor == [UIColor redColor] &&
-             self.thirdlabel.backgroundColor == [UIColor brownColor]){
+    //BBO
+    else if (self.firstlabel.backgroundColor == [UIColor blackColor]&&
+             self.secondlabel.backgroundColor == [UIColor blackColor] &&
+             self.thirdlabel.backgroundColor == [UIColor orangeColor]){
         A = A - [self.firstlabel.text integerValue];
         B = B - [self.secondlabel.text integerValue];
         C = C + [self.thirdlabel.text integerValue];
         self.value = A + B + C;
-        NSLog(@"RRB");
-        NSLog(@"%ld",(long)A);
-        NSLog(@"%ld",(long)B);
-        NSLog(@"%ld",(long)C);
+        NSLog(@"BBO");
+
     }
-    //RBR
-    else if (self.firstlabel.backgroundColor == [UIColor redColor]&&
-             self.secondlabel.backgroundColor == [UIColor brownColor] &&
-             self.thirdlabel.backgroundColor == [UIColor redColor]){
+    //BOB
+    else if (self.firstlabel.backgroundColor == [UIColor blackColor]&&
+             self.secondlabel.backgroundColor == [UIColor orangeColor] &&
+             self.thirdlabel.backgroundColor == [UIColor blackColor]){
         A = A - [self.firstlabel.text integerValue];
         B = B + [self.secondlabel.text integerValue];
         C = C - [self.thirdlabel.text integerValue];
         self.value = A + B + C;
-        NSLog(@"RBR");
-        NSLog(@"%ld",(long)A);
-        NSLog(@"%ld",(long)B);
-        NSLog(@"%ld",(long)C);
+        NSLog(@"BOB");
+
     }
-    //RBB
-    else if (self.firstlabel.backgroundColor == [UIColor redColor]&&
-             self.secondlabel.backgroundColor == [UIColor brownColor] &&
-             self.thirdlabel.backgroundColor == [UIColor brownColor]){
+    //BOO
+    else if (self.firstlabel.backgroundColor == [UIColor blackColor]&&
+             self.secondlabel.backgroundColor == [UIColor orangeColor] &&
+             self.thirdlabel.backgroundColor == [UIColor orangeColor]){
         A = A - [self.firstlabel.text integerValue];
         B = B + [self.secondlabel.text integerValue];
         C = C + [self.thirdlabel.text integerValue];
         self.value = A + B + C;
-        NSLog(@"RBB");
-        NSLog(@"%ld",(long)A);
-        NSLog(@"%ld",(long)B);
-        NSLog(@"%ld",(long)C);
+        NSLog(@"BOO");
     }
-    return _value;
+      return _value;
 }
+
 @end

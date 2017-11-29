@@ -15,8 +15,8 @@
     self = [super init];
     if (self) {
         self.colorarray = [NSArray arrayWithObjects:
-                           [UIColor brownColor],
-                           [UIColor redColor],
+                           [UIColor blackColor],
+                           [UIColor orangeColor],
                                 nil];
         
         self.numberarray = [NSArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10", nil];
