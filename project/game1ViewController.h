@@ -35,6 +35,9 @@
 - (IBAction)answerC:(id)sender;
 - (IBAction)answerD:(id)sender;
 
+@property (strong,nonatomic) NSTimer *timer;
+@property NSInteger totaltime;
 @property (strong,nonatomic) information *data;
 -(unsigned long)value;
+
 @end

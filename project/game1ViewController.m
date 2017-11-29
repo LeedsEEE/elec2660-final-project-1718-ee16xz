@@ -16,6 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.totaltime = 30;
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerfire:) userInfo:nil repeats:YES];
+    
     //hidden four answers button
     //show three labels and remember button
     self.buttona.hidden = true;
@@ -27,7 +31,7 @@
     self.data = [[information alloc] init];
  
     //set text and background of the label  when start the game
-    //one method of setting the initial random backgroundcolor ----use for loop
+   //one method of setting the initial random backgroundcolor ----use for loop
     for (int color = 0; color <_data.colorarray.count ; color++) {
         int colora = arc4random() %[_data.colorarray count];
         self.firstlabel.backgroundColor = [self.data.colorarray objectAtIndex:colora];
@@ -38,11 +42,11 @@
         int colorc = arc4random()%[_data.colorarray count];
         self.thirdlabel.backgroundColor = [self.data.colorarray objectAtIndex:colorc];
     }
-/*
-   //another method of setting backgroundcolor
-    NSUInteger colora = arc4random() % 2;   //randomly generate the integers from 0~1;
-    NSUInteger colorb = arc4random() % 2;
-    NSUInteger colorc = arc4random() % 2;
+
+/*   //another method of setting backgroundcolor
+    self.colora = arc4random() % 2;   //randomly generate the integers from 0~1;
+    self.colorb = arc4random() % 2;
+    self.colorc = arc4random() % 2;
     
    //set the initial backgroundcolor
     self.firstlabel.backgroundColor = [self.data.colorarray objectAtIndex:colora];
@@ -120,16 +124,16 @@
  /*   NSLog(@"%@",self.titlea);
     NSLog(@"%@",[NSString stringWithFormat:@"%ld",self.value]);*/
     
-    NSInteger i = [self.titlea integerValue];
-    NSInteger j = [[NSString stringWithFormat:@"%ld",self.value] integerValue];
-    if (i == j){
-        NSLog(@"yes");
-    }
 
 }
 
 #pragma mark button A is pressed
 - (IBAction)answerA:(id)sender {
+    NSInteger i = [self.titlea integerValue];
+    NSInteger j = [[NSString stringWithFormat:@"%ld",self.value] integerValue];
+    if (i == j){
+        NSLog(@"yes");
+    }
     //if buttona is pressed, four answer buttons are hidden, and three labels appear with remember button
     self.buttona.hidden = true;
     self.buttonb.hidden = true;
@@ -160,7 +164,7 @@
     self.firstlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:texta]];
     self.secondlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:textb]];
     self.thirdlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:textc]];
-    
+ 
 
    /* NSLog(@"%@",self.buttona.titleLabel.text);*/
     
@@ -359,6 +363,16 @@
         NSLog(@"BOO");
     }
       return _value;
+}
+
+-(void) timerfire:(NSTimer *)timer{
+    NSLog(@"timer fired");
+    NSLog(@"%ld",self.totaltime);
+    self.totaltime --;
+    if (self.totaltime == 0) {
+        [timer invalidate];
+        NSLog(@"timer stop");
+    }
 }
 
 @end
