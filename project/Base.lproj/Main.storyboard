@@ -36,6 +36,14 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsY-Nm-Cij">
+                                <rect key="frame" x="121" y="318" width="132" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="rememberbuttonpressed:" destination="0mK-kz-8am" eventType="touchUpInside" id="3cL-lK-9wz"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MG-BV-fDl">
                                 <rect key="frame" x="33" y="394" width="136" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -79,14 +87,13 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsY-Nm-Cij">
-                                <rect key="frame" x="121" y="318" width="132" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7KS-2Z-fMZ">
+                                <rect key="frame" x="275" y="271" width="67" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="rememberbuttonpressed:" destination="0mK-kz-8am" eventType="touchUpInside" id="3cL-lK-9wz"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="zxH-wc-kY5"/>
@@ -100,6 +107,8 @@
                         <outlet property="firstlabel" destination="APK-ze-cV5" id="3cc-j0-FJ8"/>
                         <outlet property="secondlabel" destination="5V3-Zg-uGz" id="qXs-Hv-1wt"/>
                         <outlet property="thirdlabel" destination="zBk-p2-5iG" id="YZU-Na-iOB"/>
+                        <outlet property="timerlabel" destination="7KS-2Z-fMZ" id="CZ5-dT-6WW"/>
+                        <segue destination="Nup-HR-S3E" kind="show" id="cUu-TG-X48"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ucj-7b-3fe" userLabel="First Responder" sceneMemberID="firstResponder"/>

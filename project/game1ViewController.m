@@ -16,9 +16,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    // set the time limit of the game: 30s
     self.totaltime = 30;
+    // create the timer - timeinterval: count every 1s;
+    //                    target:timer self;
+    //                    selector:the message to send to target when the timer fires
+    //                    repeat: repeat everytime when load the view
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerfire:) userInfo:nil repeats:YES];
+    
     
     //hidden four answers button
     //show three labels and remember button
@@ -272,6 +277,7 @@
     self.thirdlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:textc]];
 }
 
+// the method of calculating the correct value
 -(unsigned long)value {
     NSInteger A = 0;
     NSInteger B = 0;
@@ -365,10 +371,13 @@
       return _value;
 }
 
+
+//timer method
 -(void) timerfire:(NSTimer *)timer{
     NSLog(@"timer fired");
     NSLog(@"%ld",self.totaltime);
     self.totaltime --;
+    self.timerlabel.text = [NSString stringWithFormat:@"%ld",_totaltime];
     if (self.totaltime == 0) {
         [timer invalidate];
         NSLog(@"timer stop");

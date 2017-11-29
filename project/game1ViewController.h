@@ -28,6 +28,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *firstlabel;
 @property (weak, nonatomic) IBOutlet UILabel *secondlabel;
 @property (weak, nonatomic) IBOutlet UILabel *thirdlabel;
+@property (weak, nonatomic) IBOutlet UILabel *timerlabel;
 
 - (IBAction)rememberbuttonpressed:(id)sender;
 - (IBAction)answerA:(id)sender;
