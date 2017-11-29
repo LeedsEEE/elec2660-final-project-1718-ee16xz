@@ -14,6 +14,11 @@
 @property (nonatomic)NSUInteger value;
 @property (strong,nonatomic) NSMutableArray *answerarray;
 
+@property NSString * titlea;
+@property NSString * titleb;
+@property NSString * titlec;
+@property NSString * titled;
+
 @property (weak, nonatomic) IBOutlet UIButton *buttona;
 @property (weak, nonatomic) IBOutlet UIButton *buttonb;
 @property (weak, nonatomic) IBOutlet UIButton *buttonc;

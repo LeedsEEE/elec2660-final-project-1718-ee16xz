@@ -94,28 +94,37 @@
   //randomly generate the titles of four answer buttons without repeating
     for (int i = 0; i< _answerarray.count; i++) {
         NSUInteger ansa = arc4random()%[_answerarray count];
-        [_buttona setTitle:[self.answerarray objectAtIndex:ansa] forState:UIControlStateNormal];
+        self.titlea = [self.answerarray objectAtIndex:ansa];
+        [_buttona setTitle:self.titlea forState:UIControlStateNormal];
         [_answerarray removeObjectAtIndex:ansa];
         
         NSUInteger ansb = arc4random()%[_answerarray count];
-        NSString *titleb = [self.answerarray objectAtIndex:ansb];
-        [_buttonb setTitle:titleb forState:UIControlStateNormal];
+        self.titleb = [self.answerarray objectAtIndex:ansb];
+        [_buttonb setTitle:self.titleb forState:UIControlStateNormal];
         [_answerarray removeObjectAtIndex:ansb];
         
         NSUInteger ansc = arc4random()%[_answerarray count];
-        NSString *titlec = [self.answerarray objectAtIndex:ansc];
-        [_buttonc setTitle:titlec forState:UIControlStateNormal];
+        self.titlec = [self.answerarray objectAtIndex:ansc];
+        [_buttonc setTitle:self.titlec forState:UIControlStateNormal];
         [_answerarray removeObjectAtIndex:ansc];
         
         NSUInteger ansd = arc4random()%[_answerarray count];
-        NSString *titled = [self.answerarray objectAtIndex:ansd];
-        [_buttond setTitle:titled forState:UIControlStateNormal];
+        self.titled = [self.answerarray objectAtIndex:ansd];
+        [_buttond setTitle:self.titled forState:UIControlStateNormal];
         [_answerarray removeObjectAtIndex:ansd];
+        
     }
 
     NSLog(@"right answer is %ld",self.value);
     
-
+ /*   NSLog(@"%@",self.titlea);
+    NSLog(@"%@",[NSString stringWithFormat:@"%ld",self.value]);*/
+    
+    NSInteger i = [self.titlea integerValue];
+    NSInteger j = [[NSString stringWithFormat:@"%ld",self.value] integerValue];
+    if (i == j){
+        NSLog(@"yes");
+    }
 
 }
 
@@ -152,7 +161,8 @@
     self.secondlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:textb]];
     self.thirdlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:textc]];
     
-    NSLog(@"%@",self.buttona.titleLabel.text);
+
+   /* NSLog(@"%@",self.buttona.titleLabel.text);*/
     
 }
 
