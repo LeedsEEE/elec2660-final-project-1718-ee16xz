@@ -54,6 +54,7 @@
 		1806306D1FB06F6C009A27C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		180D79DC1FC757B300CDFF3D /* information.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = information.h; sourceTree = "<group>"; };
 		180D79DD1FC757B300CDFF3D /* information.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = information.m; sourceTree = "<group>"; };
+		18BC8DF71FD1C29C001983B3 /* icon */ = {isa = PBXFileReference; lastKnownFileType = folder; path = icon; sourceTree = "<group>"; };
 		18E004941FCDABC8005CC3EC /* game1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = game1ViewController.h; sourceTree = "<group>"; };
 		18E004951FCDABC8005CC3EC /* game1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = game1ViewController.m; sourceTree = "<group>"; };
 		18E004971FCDABD7005CC3EC /* game2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = game2ViewController.h; sourceTree = "<group>"; };
@@ -120,6 +121,7 @@
 				180630471FB06F6C009A27C4 /* AppDelegate.h */,
 				180630481FB06F6C009A27C4 /* AppDelegate.m */,
 				180630501FB06F6C009A27C4 /* Assets.xcassets */,
+				18BC8DF71FD1C29C001983B3 /* icon */,
 				180630521FB06F6C009A27C4 /* LaunchScreen.storyboard */,
 				180630551FB06F6C009A27C4 /* Info.plist */,
 				180630561FB06F6C009A27C4 /* main.m */,
