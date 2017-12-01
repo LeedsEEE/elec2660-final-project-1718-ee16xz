@@ -43,7 +43,7 @@
 - (IBAction)answerC:(id)sender;
 - (IBAction)answerD:(id)sender;
 
-@property(strong,nonatomic) AVAudioPlayer *check;
+@property (strong,nonatomic) AVAudioPlayer *check;
 @property (strong,nonatomic) NSTimer *timer;
 @property NSInteger runtime; 
 

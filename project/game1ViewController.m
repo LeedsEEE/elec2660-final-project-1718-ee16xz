@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //change the height of progress bar
     [self.progressview setTransform:CGAffineTransformMakeScale(1.0, 3.0)];
     
     // set the time limit of the game: 30s
@@ -28,24 +29,23 @@
     //                    repeat: repeat everytime when load the view
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerfire:) userInfo:nil repeats:YES];
     
-   //set the all results to 0
+   //set the all results to 0 first
     self.totaltimes = 0;
     self.correcttimes = 0;
     self.wrongtimes = 0;
     self.accuracy = 0;
     
-    //hidden four answers button
-    //show three labels and remember button
+    //hidden four answers button first
     self.buttona.hidden = true;
     self.buttonb.hidden = true;
     self.buttonc.hidden = true;
     self.buttond.hidden = true;
     
-    
    //initilize the information class
     self.data = [[information alloc] init];
  
     [self labelproperties];
+    [self audioplayer];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -80,6 +80,7 @@
                         [NSString stringWithFormat:@"%ld",wrongvalue2_],
                         [NSString stringWithFormat:@"%ld",wrongvalue3_],
                         nil];
+    
     //I've learnt how to randomly generate the titles for four answer buttons without repeating on the following website:https://stackoverflow.com/questions/14431873/how-to-generate-random-values-from-an-array-without-repeating-any-in-objective-c
     
     for (int i = 0; i< _answerarray.count; i++) {
@@ -114,9 +115,17 @@
     NSInteger a = [self.titlea integerValue];
     NSInteger A = [[NSString stringWithFormat:@"%ld",self.value] integerValue];
     if (a == A){
+        NSLog(@"buttona is correct");
         self.correcttimes ++;
         self.correcttimes = self.correcttimes;
-        NSLog(@"buttona is correct");
+        
+        //if the sound is already playing,stop it first
+        if([self.check isPlaying]){
+            [self.check stop];
+            self.check.currentTime = 0.0;
+        }
+        [self.check play];
+        
     }else{
         self.wrongtimes ++;
         self.wrongtimes = self.wrongtimes;
@@ -143,9 +152,16 @@
     NSInteger b = [self.titleb integerValue];
     NSInteger B = [[NSString stringWithFormat:@"%ld",self.value] integerValue];
     if (b == B){
+        NSLog(@"buttonb is correct");
         self.correcttimes ++;
         self.correcttimes = self.correcttimes;
-        NSLog(@"buttonb is correct");
+        //if the sound is already playing,stop it first
+        if([self.check isPlaying]){
+            [self.check stop];
+            self.check.currentTime = 0.0;
+        }
+        [self.check play];
+        
     }else{
         self.wrongtimes ++;
         self.wrongtimes = self.wrongtimes;
@@ -172,9 +188,17 @@
     NSInteger c = [self.titlec integerValue];
     NSInteger C = [[NSString stringWithFormat:@"%ld",self.value] integerValue];
     if (c == C){
+        NSLog(@"buttonc is correct");
         self.correcttimes ++;
         self.correcttimes = self.correcttimes;
-        NSLog(@"buttonc is correct");
+        
+        //if the sound is already playing,stop it first
+        if([self.check isPlaying]){
+            [self.check stop];
+            self.check.currentTime = 0.0;
+        }
+        [self.check play];
+        
     }else{
         self.wrongtimes ++;
         self.wrongtimes = self.wrongtimes;
@@ -200,9 +224,17 @@
     NSInteger d = [self.titled integerValue];
     NSInteger D = [[NSString stringWithFormat:@"%ld",self.value] integerValue];
     if (d == D){
+        NSLog(@"buttond is correct");
         self.correcttimes ++;
         self.correcttimes = self.correcttimes;
-        NSLog(@"buttond is correct");
+        
+        //if the sound is already playing,stop it first
+        if([self.check isPlaying]){
+            [self.check stop];
+            self.check.currentTime = 0.0;
+        }
+            [self.check play];
+        
     }else{
         self.wrongtimes ++;
         self.wrongtimes = self.wrongtimes;
@@ -362,6 +394,7 @@
     // set the progress view which indicates the runtime
     self.progressview.progress = (30-_runtime)/30.0f;
     
+    
     if (self.runtime == 0) {
         [timer invalidate];
         NSLog(@"timer stop");
@@ -370,6 +403,17 @@
         //when the timer is stopped, goes to the next view controller
         [self performSegueWithIdentifier:@"showresults" sender:nil];
     }
+}
+
+
+// learnt how to use audioplayer from the resource provided on the vle (the tutorial given by Dr Evans)
+-(void) audioplayer {
+    NSString *filepath = [[NSBundle mainBundle] pathForResource:@"2" ofType:@"wav"];
+    NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:filepath];
+    
+    
+    self.check = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
+    [self.check prepareToPlay];
 }
 
 
