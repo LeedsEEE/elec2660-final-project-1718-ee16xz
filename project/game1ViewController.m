@@ -17,6 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.progressview setTransform:CGAffineTransformMakeScale(1.0, 3.0)];
+    
     // set the time limit of the game: 30s
     self.runtime = 30;
     // create the timer - timeinterval: count every 1s;
@@ -25,7 +28,7 @@
     //                    repeat: repeat everytime when load the view
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerfire:) userInfo:nil repeats:YES];
     
-    //set the all results to 0
+   //set the all results to 0
     self.totaltimes = 0;
     self.correcttimes = 0;
     self.wrongtimes = 0;
@@ -38,40 +41,11 @@
     self.buttonc.hidden = true;
     self.buttond.hidden = true;
     
-    //initilize the information class
+    
+   //initilize the information class
     self.data = [[information alloc] init];
  
-    //set text and background of the label  when start the game
-   //one method of setting the initial random backgroundcolor ----use for loop
-    for (int color = 0; color <_data.colorarray.count ; color++) {
-        int colora = arc4random() %[_data.colorarray count];
-        self.firstlabel.backgroundColor = [self.data.colorarray objectAtIndex:colora];
-        
-        int colorb = arc4random()%[_data.colorarray count];
-        self.secondlabel.backgroundColor = [self.data.colorarray objectAtIndex:colorb];
-     
-        int colorc = arc4random()%[_data.colorarray count];
-        self.thirdlabel.backgroundColor = [self.data.colorarray objectAtIndex:colorc];
-    }
-
-/*   //another method of setting backgroundcolor
-    self.colora = arc4random() % 2;   //randomly generate the integers from 0~1;
-    self.colorb = arc4random() % 2;
-    self.colorc = arc4random() % 2;
-    
-   //set the initial backgroundcolor
-    self.firstlabel.backgroundColor = [self.data.colorarray objectAtIndex:colora];
-    self.secondlabel.backgroundColor = [self.data.colorarray objectAtIndex:colorb];
-    self.thirdlabel.backgroundColor = [self.data.colorarray objectAtIndex:colorc];*/
-    
-    //random textindex for each label
-    NSUInteger texta = arc4random() % 10;
-    NSUInteger textb = arc4random() % 10;
-    NSUInteger textc = arc4random() % 10;
-    //set the initial text
-    self.firstlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:texta]];
-    self.secondlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:textb]];
-    self.thirdlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:textc]];
+    [self labelproperties];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -159,25 +133,8 @@
     self.thirdlabel.hidden = false;
     self.buttonremember.hidden = false;
     
-    //information(text and background) of the label
-    //random backgroundcolorindex for each label
-    NSUInteger colora = arc4random() % 2;   //randomly generate the integers from 0~1;
-    NSUInteger colorb = arc4random() % 2;
-    NSUInteger colorc = arc4random() % 2;
-    //random textindex for each label
-    NSUInteger texta = arc4random() % 10;
-    NSUInteger textb = arc4random() % 10;
-    NSUInteger textc = arc4random() % 10;
-    
-    //set the backgroundcolor
-    self.firstlabel.backgroundColor = [self.data.colorarray objectAtIndex:colora];
-    self.secondlabel.backgroundColor = [self.data.colorarray objectAtIndex:colorb];
-    self.thirdlabel.backgroundColor = [self.data.colorarray objectAtIndex:colorc];
-    
-    //set the text
-    self.firstlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:texta]];
-    self.secondlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:textb]];
-    self.thirdlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:textc]];
+    [self labelproperties];
+
 }
 
 #pragma mark button B is pressed
@@ -205,25 +162,8 @@
     self.thirdlabel.hidden = false;
     self.buttonremember.hidden = false;
     
-    //information(text and background) of the label
-    //random backgroundcolorindex for each label
-    NSUInteger colora = arc4random() % 2;   //randomly generate the integers from 0~1;
-    NSUInteger colorb = arc4random() % 2;
-    NSUInteger colorc = arc4random() % 2;
-    //random textindex for each label
-    NSUInteger texta = arc4random() % 10;
-    NSUInteger textb = arc4random() % 10;
-    NSUInteger textc = arc4random() % 10;
-    
-    //set the backgroundcolor
-    self.firstlabel.backgroundColor = [self.data.colorarray objectAtIndex:colora];
-    self.secondlabel.backgroundColor = [self.data.colorarray objectAtIndex:colorb];
-    self.thirdlabel.backgroundColor = [self.data.colorarray objectAtIndex:colorc];
-    
-    //set the text
-    self.firstlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:texta]];
-    self.secondlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:textb]];
-    self.thirdlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:textc]];
+    [self labelproperties];
+
 }
 
 #pragma mark button C is pressed
@@ -251,25 +191,7 @@
     self.thirdlabel.hidden = false;
     self.buttonremember.hidden = false;
     
-    //information(text and background) of the label
-    //random backgroundcolorindex for each label
-    NSUInteger colora = arc4random() % 2;   //randomly generate the integers from 0~1;
-    NSUInteger colorb = arc4random() % 2;
-    NSUInteger colorc = arc4random() % 2;
-    //random textindex for each label
-    NSUInteger texta = arc4random() % 10;
-    NSUInteger textb = arc4random() % 10;
-    NSUInteger textc = arc4random() % 10;
-    
-    //set the backgroundcolor
-    self.firstlabel.backgroundColor = [self.data.colorarray objectAtIndex:colora];
-    self.secondlabel.backgroundColor = [self.data.colorarray objectAtIndex:colorb];
-    self.thirdlabel.backgroundColor = [self.data.colorarray objectAtIndex:colorc];
-    
-    //set the text
-    self.firstlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:texta]];
-    self.secondlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:textb]];
-    self.thirdlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:textc]];
+    [self labelproperties];
 }
 
 # pragma mark button D is pressed
@@ -297,26 +219,9 @@
     self.thirdlabel.hidden = false;
     self.buttonremember.hidden = false;
     
-    //information(text and background) of the label
-    //random backgroundcolorindex for each label
-    NSUInteger colora = arc4random() % 2;   //randomly generate the integers from 0~1;
-    NSUInteger colorb = arc4random() % 2;
-    NSUInteger colorc = arc4random() % 2;
-    //random textindex for each label
-    NSUInteger texta = arc4random() % 10;
-    NSUInteger textb = arc4random() % 10;
-    NSUInteger textc = arc4random() % 10;
-    
-    //set the backgroundcolor
-    self.firstlabel.backgroundColor = [self.data.colorarray objectAtIndex:colora];
-    self.secondlabel.backgroundColor = [self.data.colorarray objectAtIndex:colorb];
-    self.thirdlabel.backgroundColor = [self.data.colorarray objectAtIndex:colorc];
-    
-    //set the text
-    self.firstlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:texta]];
-    self.secondlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:textb]];
-    self.thirdlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:textc]];
+    [self labelproperties];
 }
+
 
 // the method of calculating the correct value
 -(unsigned long)value {
@@ -413,10 +318,50 @@
 }
 
 
+   //use the void function to set the label properties
+- (void)labelproperties{
+    //set text and background of the label  when start the game
+    //one method of setting the initial random backgroundcolor ----use for loop
+    for (int color = 0; color <_data.colorarray.count ; color++) {
+        int colora = arc4random() %[_data.colorarray count];
+        self.firstlabel.backgroundColor = [self.data.colorarray objectAtIndex:colora];
+        
+        int colorb = arc4random()%[_data.colorarray count];
+        self.secondlabel.backgroundColor = [self.data.colorarray objectAtIndex:colorb];
+        
+        int colorc = arc4random()%[_data.colorarray count];
+        self.thirdlabel.backgroundColor = [self.data.colorarray objectAtIndex:colorc];
+    }
+    
+    /*   //another method of setting backgroundcolor
+     self.colora = arc4random() % 2;   //randomly generate the integers from 0~1;
+     self.colorb = arc4random() % 2;
+     self.colorc = arc4random() % 2;
+     
+     //set the initial backgroundcolor
+     self.firstlabel.backgroundColor = [self.data.colorarray objectAtIndex:colora];
+     self.secondlabel.backgroundColor = [self.data.colorarray objectAtIndex:colorb];
+     self.thirdlabel.backgroundColor = [self.data.colorarray objectAtIndex:colorc];*/
+    
+    //random textindex for each label
+    NSUInteger texta = arc4random() % 10;
+    NSUInteger textb = arc4random() % 10;
+    NSUInteger textc = arc4random() % 10;
+    //set the initial text
+    self.firstlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:texta]];
+    self.secondlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:textb]];
+    self.thirdlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:textc]];
+}
+
+
 //timer method
 -(void) timerfire:(NSTimer *)timer{
     self.runtime --;
     self.timerlabel.text = [NSString stringWithFormat:@"%ld",_runtime];
+   
+    // set the progress view which indicates the runtime
+    self.progressview.progress = (30-_runtime)/30.0f;
+    
     if (self.runtime == 0) {
         [timer invalidate];
         NSLog(@"timer stop");
@@ -440,4 +385,5 @@
     g2.total = [NSString stringWithFormat:@"%ld",self.totaltimes];
     g2.accuracy = [NSString stringWithFormat:@"%.2f",self.accuracy];
 }
+
 @end

@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 #import "information.h"
 #import "game2ViewController.h"
+
 @interface game1ViewController : UIViewController
 
 @property (nonatomic)NSUInteger value;
@@ -16,7 +18,6 @@
 @property NSInteger wrongtimes;
 @property NSInteger totaltimes;
 @property float accuracy;
-
 @property (strong,nonatomic) NSMutableArray *answerarray;
 
 @property NSString * titlea;
@@ -24,6 +25,7 @@
 @property NSString * titlec;
 @property NSString * titled;
 
+@property (weak, nonatomic) IBOutlet UIProgressView *progressview;
 @property (weak, nonatomic) IBOutlet UIButton *buttona;
 @property (weak, nonatomic) IBOutlet UIButton *buttonb;
 @property (weak, nonatomic) IBOutlet UIButton *buttonc;
@@ -41,8 +43,9 @@
 - (IBAction)answerC:(id)sender;
 - (IBAction)answerD:(id)sender;
 
+@property(strong,nonatomic) AVAudioPlayer *check;
 @property (strong,nonatomic) NSTimer *timer;
-@property NSInteger runtime;
+@property NSInteger runtime; 
 
 @property (strong,nonatomic) information *data;
 -(unsigned long)value;
