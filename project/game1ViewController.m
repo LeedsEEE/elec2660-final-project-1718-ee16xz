@@ -116,6 +116,7 @@
     NSInteger A = [[NSString stringWithFormat:@"%ld",self.value] integerValue];
     if (a == A){
         NSLog(@"buttona is correct");
+        self.runtime += 2;
         self.correcttimes ++;
         self.correcttimes = self.correcttimes;
         
@@ -153,6 +154,7 @@
     NSInteger B = [[NSString stringWithFormat:@"%ld",self.value] integerValue];
     if (b == B){
         NSLog(@"buttonb is correct");
+        self.runtime += 2;
         self.correcttimes ++;
         self.correcttimes = self.correcttimes;
         //if the sound is already playing,stop it first
@@ -189,6 +191,7 @@
     NSInteger C = [[NSString stringWithFormat:@"%ld",self.value] integerValue];
     if (c == C){
         NSLog(@"buttonc is correct");
+        self.runtime += 2;
         self.correcttimes ++;
         self.correcttimes = self.correcttimes;
         
@@ -225,6 +228,7 @@
     NSInteger D = [[NSString stringWithFormat:@"%ld",self.value] integerValue];
     if (d == D){
         NSLog(@"buttond is correct");
+        self.runtime += 2;
         self.correcttimes ++;
         self.correcttimes = self.correcttimes;
         
@@ -421,7 +425,11 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     self.totaltimes = self.correcttimes + self.wrongtimes;
+    if (self.totaltimes == 0){
+        self.accuracy = 0.0;
+    }else{
     self.accuracy = (((float)self.correcttimes) / ((float)self.totaltimes))*100.00;
+    }
     
     game2ViewController *g2 = [segue destinationViewController];
     g2.right = [NSString stringWithFormat:@"%ld",self.correcttimes];
