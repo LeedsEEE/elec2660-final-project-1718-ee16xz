@@ -17,26 +17,26 @@
 		180D79DE1FC757B300CDFF3D /* information.m in Sources */ = {isa = PBXBuildFile; fileRef = 180D79DD1FC757B300CDFF3D /* information.m */; };
 		186B873F1FD32558003C2C0B /* background.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 186B873E1FD32519003C2C0B /* background.JPG */; };
 		186B87401FD32558003C2C0B /* titleimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 186B873D1FD324EA003C2C0B /* titleimage.png */; };
-		186B87421FD32843003C2C0B /* play100.png in Resources */ = {isa = PBXBuildFile; fileRef = 186B87411FD3281A003C2C0B /* play100.png */; };
-		186B87441FD328C7003C2C0B /* help50.png in Resources */ = {isa = PBXBuildFile; fileRef = 186B87431FD32898003C2C0B /* help50.png */; };
-		186B87491FD32AD2003C2C0B /* bestscore32.png in Resources */ = {isa = PBXBuildFile; fileRef = 186B87481FD32ABD003C2C0B /* bestscore32.png */; };
 		186B874C1FD32D04003C2C0B /* EenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186B874B1FD32D04003C2C0B /* EenterViewController.m */; };
 		186B879E1FD34945003C2C0B /* GameruleRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186B879D1FD34945003C2C0B /* GameruleRootViewController.m */; };
 		186B87A11FD34975003C2C0B /* GamerulePageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186B87A01FD34975003C2C0B /* GamerulePageContentViewController.m */; };
+		1888B31E1FD35E30000195C2 /* play100.png in Resources */ = {isa = PBXBuildFile; fileRef = 1888B31B1FD35E1C000195C2 /* play100.png */; };
+		1888B31F1FD35E30000195C2 /* help50.png in Resources */ = {isa = PBXBuildFile; fileRef = 1888B31C1FD35E1C000195C2 /* help50.png */; };
+		1888B3201FD35E30000195C2 /* bestscore32.png in Resources */ = {isa = PBXBuildFile; fileRef = 1888B31D1FD35E1C000195C2 /* bestscore32.png */; };
+		1888B3221FD360B6000195C2 /* rulebackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 1888B3211FD36099000195C2 /* rulebackground.png */; };
+		1888B3261FD365BC000195C2 /* skip.png in Resources */ = {isa = PBXBuildFile; fileRef = 1888B3251FD364D6000195C2 /* skip.png */; };
+		1888B3281FD36D21000195C2 /* titleimage1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1888B3271FD36C74000195C2 /* titleimage1.png */; };
+		1888B32C1FD3714F000195C2 /* Rule1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1888B3291FD3712F000195C2 /* Rule1.png */; };
+		1888B32D1FD3714F000195C2 /* Rule2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1888B32A1FD3712F000195C2 /* Rule2.png */; };
+		1888B32E1FD3714F000195C2 /* Rule3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1888B32B1FD37130000195C2 /* Rule3.png */; };
 		18BC8DF91FD1CD63001983B3 /* IMG_2938.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18BC8DF81FD1CCF3001983B3 /* IMG_2938.jpg */; };
-		18BC8DFD1FD1D390001983B3 /* rule1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18BC8DFC1FD1D388001983B3 /* rule1.jpg */; };
 		18BC8E4C1FD20517001983B3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BC8E4B1FD20517001983B3 /* AVFoundation.framework */; };
 		18BC8E571FD21A94001983B3 /* rightanswer.wav in Resources */ = {isa = PBXBuildFile; fileRef = 18BC8E531FD2173F001983B3 /* rightanswer.wav */; };
 		18BC8E581FD21A94001983B3 /* wronganser.wav in Resources */ = {isa = PBXBuildFile; fileRef = 18BC8E541FD2173F001983B3 /* wronganser.wav */; };
 		18BC8E591FD21A94001983B3 /* 2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 18BC8E551FD2173F001983B3 /* 2.wav */; };
 		18BC8E5A1FD21A94001983B3 /* rightanswer1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 18BC8E561FD2173F001983B3 /* rightanswer1.wav */; };
-		18BC8E861FD311D1001983B3 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BC8E7F1FD3116A001983B3 /* background.png */; };
-		18BC8E881FD311D1001983B3 /* cards48.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BC8E811FD3116A001983B3 /* cards48.png */; };
-		18BC8E8A1FD311D1001983B3 /* info96.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BC8E831FD3116A001983B3 /* info96.png */; };
-		18BC8E8B1FD311D1001983B3 /* dice48.png in Resources */ = {isa = PBXBuildFile; fileRef = 18BC8E841FD3116A001983B3 /* dice48.png */; };
 		18E004961FCDABC8005CC3EC /* game1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E004951FCDABC8005CC3EC /* game1ViewController.m */; };
 		18E004991FCDABD7005CC3EC /* game2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E004981FCDABD7005CC3EC /* game2ViewController.m */; };
-		18E0049B1FCDACD9005CC3EC /* gamerules.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E0049A1FCDACBB005CC3EC /* gamerules.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,32 +75,33 @@
 		180D79DD1FC757B300CDFF3D /* information.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = information.m; sourceTree = "<group>"; };
 		186B873D1FD324EA003C2C0B /* titleimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = titleimage.png; sourceTree = "<group>"; };
 		186B873E1FD32519003C2C0B /* background.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.JPG; sourceTree = "<group>"; };
-		186B87411FD3281A003C2C0B /* play100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play100.png; sourceTree = "<group>"; };
-		186B87431FD32898003C2C0B /* help50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help50.png; sourceTree = "<group>"; };
-		186B87481FD32ABD003C2C0B /* bestscore32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bestscore32.png; sourceTree = "<group>"; };
 		186B874A1FD32D04003C2C0B /* EenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EenterViewController.h; sourceTree = "<group>"; };
 		186B874B1FD32D04003C2C0B /* EenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EenterViewController.m; sourceTree = "<group>"; };
 		186B879C1FD34945003C2C0B /* GameruleRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameruleRootViewController.h; sourceTree = "<group>"; };
 		186B879D1FD34945003C2C0B /* GameruleRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameruleRootViewController.m; sourceTree = "<group>"; };
 		186B879F1FD34975003C2C0B /* GamerulePageContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GamerulePageContentViewController.h; sourceTree = "<group>"; };
 		186B87A01FD34975003C2C0B /* GamerulePageContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GamerulePageContentViewController.m; sourceTree = "<group>"; };
+		1888B31B1FD35E1C000195C2 /* play100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play100.png; sourceTree = "<group>"; };
+		1888B31C1FD35E1C000195C2 /* help50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help50.png; sourceTree = "<group>"; };
+		1888B31D1FD35E1C000195C2 /* bestscore32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bestscore32.png; sourceTree = "<group>"; };
+		1888B3211FD36099000195C2 /* rulebackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rulebackground.png; sourceTree = "<group>"; };
+		1888B3241FD364CA000195C2 /* skip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skip.png; sourceTree = "<group>"; };
+		1888B3251FD364D6000195C2 /* skip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skip.png; path = project/skip.png; sourceTree = SOURCE_ROOT; };
+		1888B3271FD36C74000195C2 /* titleimage1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = titleimage1.png; sourceTree = "<group>"; };
+		1888B3291FD3712F000195C2 /* Rule1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rule1.png; sourceTree = "<group>"; };
+		1888B32A1FD3712F000195C2 /* Rule2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rule2.png; sourceTree = "<group>"; };
+		1888B32B1FD37130000195C2 /* Rule3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rule3.png; sourceTree = "<group>"; };
 		18BC8DF71FD1C29C001983B3 /* icon */ = {isa = PBXFileReference; lastKnownFileType = folder; path = icon; sourceTree = "<group>"; };
 		18BC8DF81FD1CCF3001983B3 /* IMG_2938.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2938.jpg; sourceTree = "<group>"; };
-		18BC8DFC1FD1D388001983B3 /* rule1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rule1.jpg; sourceTree = "<group>"; };
 		18BC8E4B1FD20517001983B3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		18BC8E531FD2173F001983B3 /* rightanswer.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rightanswer.wav; sourceTree = "<group>"; };
 		18BC8E541FD2173F001983B3 /* wronganser.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wronganser.wav; sourceTree = "<group>"; };
 		18BC8E551FD2173F001983B3 /* 2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 2.wav; sourceTree = "<group>"; };
 		18BC8E561FD2173F001983B3 /* rightanswer1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rightanswer1.wav; sourceTree = "<group>"; };
-		18BC8E7F1FD3116A001983B3 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
-		18BC8E811FD3116A001983B3 /* cards48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cards48.png; sourceTree = "<group>"; };
-		18BC8E831FD3116A001983B3 /* info96.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info96.png; sourceTree = "<group>"; };
-		18BC8E841FD3116A001983B3 /* dice48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice48.png; sourceTree = "<group>"; };
 		18E004941FCDABC8005CC3EC /* game1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = game1ViewController.h; sourceTree = "<group>"; };
 		18E004951FCDABC8005CC3EC /* game1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = game1ViewController.m; sourceTree = "<group>"; };
 		18E004971FCDABD7005CC3EC /* game2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = game2ViewController.h; sourceTree = "<group>"; };
 		18E004981FCDABD7005CC3EC /* game2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = game2ViewController.m; sourceTree = "<group>"; };
-		18E0049A1FCDACBB005CC3EC /* gamerules.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gamerules.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,16 +169,20 @@
 				180D79DD1FC757B300CDFF3D /* information.m */,
 				180630471FB06F6C009A27C4 /* AppDelegate.h */,
 				180630481FB06F6C009A27C4 /* AppDelegate.m */,
-				18E0049A1FCDACBB005CC3EC /* gamerules.png */,
-				18BC8DFC1FD1D388001983B3 /* rule1.jpg */,
-				18BC8DF81FD1CCF3001983B3 /* IMG_2938.jpg */,
 				186B873E1FD32519003C2C0B /* background.JPG */,
 				186B873D1FD324EA003C2C0B /* titleimage.png */,
-				18BC8E7D1FD3116A001983B3 /* samples */,
+				1888B3271FD36C74000195C2 /* titleimage1.png */,
+				1888B3211FD36099000195C2 /* rulebackground.png */,
+				1888B3241FD364CA000195C2 /* skip.png */,
+				1888B3291FD3712F000195C2 /* Rule1.png */,
+				1888B32A1FD3712F000195C2 /* Rule2.png */,
+				1888B32B1FD37130000195C2 /* Rule3.png */,
+				1888B31A1FD35E1C000195C2 /* samples */,
 				18BC8E521FD2173F001983B3 /* audiosample */,
 				180630501FB06F6C009A27C4 /* Assets.xcassets */,
 				18BC8DF71FD1C29C001983B3 /* icon */,
 				180630521FB06F6C009A27C4 /* LaunchScreen.storyboard */,
+				18BC8DF81FD1CCF3001983B3 /* IMG_2938.jpg */,
 				180630551FB06F6C009A27C4 /* Info.plist */,
 				180630561FB06F6C009A27C4 /* main.m */,
 			);
@@ -202,6 +207,18 @@
 			path = projectUITests;
 			sourceTree = "<group>";
 		};
+		1888B31A1FD35E1C000195C2 /* samples */ = {
+			isa = PBXGroup;
+			children = (
+				1888B3251FD364D6000195C2 /* skip.png */,
+				1888B31B1FD35E1C000195C2 /* play100.png */,
+				1888B31C1FD35E1C000195C2 /* help50.png */,
+				1888B31D1FD35E1C000195C2 /* bestscore32.png */,
+			);
+			name = samples;
+			path = ../../samples;
+			sourceTree = "<group>";
+		};
 		18BC8E4A1FD20516001983B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,21 +236,6 @@
 				18BC8E561FD2173F001983B3 /* rightanswer1.wav */,
 			);
 			path = audiosample;
-			sourceTree = "<group>";
-		};
-		18BC8E7D1FD3116A001983B3 /* samples */ = {
-			isa = PBXGroup;
-			children = (
-				186B87481FD32ABD003C2C0B /* bestscore32.png */,
-				186B87411FD3281A003C2C0B /* play100.png */,
-				18BC8E7F1FD3116A001983B3 /* background.png */,
-				186B87431FD32898003C2C0B /* help50.png */,
-				18BC8E811FD3116A001983B3 /* cards48.png */,
-				18BC8E831FD3116A001983B3 /* info96.png */,
-				18BC8E841FD3116A001983B3 /* dice48.png */,
-			);
-			name = samples;
-			path = ../../samples;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,22 +344,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				186B87491FD32AD2003C2C0B /* bestscore32.png in Resources */,
-				186B87441FD328C7003C2C0B /* help50.png in Resources */,
-				186B87421FD32843003C2C0B /* play100.png in Resources */,
+				1888B32C1FD3714F000195C2 /* Rule1.png in Resources */,
+				1888B32D1FD3714F000195C2 /* Rule2.png in Resources */,
+				1888B32E1FD3714F000195C2 /* Rule3.png in Resources */,
+				1888B3281FD36D21000195C2 /* titleimage1.png in Resources */,
+				1888B3261FD365BC000195C2 /* skip.png in Resources */,
+				1888B3221FD360B6000195C2 /* rulebackground.png in Resources */,
+				1888B31E1FD35E30000195C2 /* play100.png in Resources */,
+				1888B31F1FD35E30000195C2 /* help50.png in Resources */,
+				1888B3201FD35E30000195C2 /* bestscore32.png in Resources */,
 				186B873F1FD32558003C2C0B /* background.JPG in Resources */,
 				186B87401FD32558003C2C0B /* titleimage.png in Resources */,
-				18BC8E861FD311D1001983B3 /* background.png in Resources */,
-				18BC8E881FD311D1001983B3 /* cards48.png in Resources */,
-				18BC8E8A1FD311D1001983B3 /* info96.png in Resources */,
-				18BC8E8B1FD311D1001983B3 /* dice48.png in Resources */,
 				18BC8E571FD21A94001983B3 /* rightanswer.wav in Resources */,
 				18BC8E581FD21A94001983B3 /* wronganser.wav in Resources */,
 				18BC8E591FD21A94001983B3 /* 2.wav in Resources */,
 				18BC8E5A1FD21A94001983B3 /* rightanswer1.wav in Resources */,
-				18BC8DFD1FD1D390001983B3 /* rule1.jpg in Resources */,
 				18BC8DF91FD1CD63001983B3 /* IMG_2938.jpg in Resources */,
-				18E0049B1FCDACD9005CC3EC /* gamerules.png in Resources */,
 				180630541FB06F6C009A27C4 /* LaunchScreen.storyboard in Resources */,
 				180630511FB06F6C009A27C4 /* Assets.xcassets in Resources */,
 				1806304F1FB06F6C009A27C4 /* Main.storyboard in Resources */,

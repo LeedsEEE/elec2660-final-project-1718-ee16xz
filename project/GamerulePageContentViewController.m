@@ -14,9 +14,13 @@
 
 @implementation GamerulePageContentViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    self.Ruleimage.image = [UIImage imageNamed:self.imagefile];
+    self.Rulelabel.text = self.ruletext;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -10,4 +10,10 @@
 
 @interface GamerulePageContentViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *Ruleimage;
+@property (weak, nonatomic) IBOutlet UILabel *Rulelabel;
+
+@property NSUInteger pageindex;
+@property NSString *imagefile;
+@property NSString *ruletext;
 @end

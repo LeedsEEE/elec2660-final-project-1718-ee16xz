@@ -13,6 +13,9 @@
         <array key="Chalkduster.ttf">
             <string>Chalkduster</string>
         </array>
+        <array key="MarkerFeltWide.ttf">
+            <string>MarkerFelt-Wide</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Game1 View Controller-->
@@ -230,12 +233,6 @@
                                     <segue destination="0v9-Wb-isE" kind="show" id="q6d-3l-UI0"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titleimage.png" translatesAutoresizingMaskIntoConstraints="NO" id="CWq-zv-kCJ">
-                                <rect key="frame" x="0.0" y="60" width="375" height="176"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="176" id="zTn-il-UY4"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POR-xY-WjM">
                                 <rect key="frame" x="16" y="588" width="54" height="59"/>
                                 <constraints>
@@ -243,17 +240,17 @@
                                 </constraints>
                                 <state key="normal" image="help50.png"/>
                                 <connections>
-                                    <segue destination="n8b-S8-dqB" kind="show" id="XFX-IV-p28"/>
+                                    <segue destination="n8b-S8-dqB" kind="show" id="tZ7-ae-sza"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bestscore32.png" translatesAutoresizingMaskIntoConstraints="NO" id="fPP-7l-4A6">
                                 <rect key="frame" x="29" y="297" width="32" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Best Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CcD-jz-gd5">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Best Score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CcD-jz-gd5">
                                 <rect key="frame" x="60" y="304" width="195" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -264,20 +261,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titleimage1.png" translatesAutoresizingMaskIntoConstraints="NO" id="CWq-zv-kCJ">
+                                <rect key="frame" x="-32" y="-45" width="391" height="334"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="334" id="zTn-il-UY4"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="4gP-Eb-4hF" firstAttribute="leading" secondItem="POR-xY-WjM" secondAttribute="trailing" constant="63" id="7ld-J6-t21"/>
                             <constraint firstAttribute="bottom" secondItem="POR-xY-WjM" secondAttribute="bottom" constant="20" symbolic="YES" id="8C2-Qr-THE"/>
                             <constraint firstItem="VQE-Ut-qI7" firstAttribute="trailing" secondItem="4gP-Eb-4hF" secondAttribute="trailing" constant="133" id="E1n-k3-mKy"/>
                             <constraint firstItem="VQE-Ut-qI7" firstAttribute="bottom" secondItem="4gP-Eb-4hF" secondAttribute="bottom" constant="48" id="Ex9-pl-LH7"/>
-                            <constraint firstItem="CWq-zv-kCJ" firstAttribute="trailing" secondItem="cNz-8l-LEk" secondAttribute="trailing" id="GKH-jX-ghV"/>
-                            <constraint firstAttribute="trailing" secondItem="CWq-zv-kCJ" secondAttribute="trailing" id="J9L-O1-RgA"/>
-                            <constraint firstItem="CWq-zv-kCJ" firstAttribute="centerX" secondItem="4gP-Eb-4hF" secondAttribute="centerX" id="O76-Aa-dbY"/>
+                            <constraint firstItem="CWq-zv-kCJ" firstAttribute="trailing" secondItem="cNz-8l-LEk" secondAttribute="trailing" constant="-16" id="GKH-jX-ghV"/>
+                            <constraint firstAttribute="trailing" secondItem="CWq-zv-kCJ" secondAttribute="trailing" constant="16" id="J9L-O1-RgA"/>
+                            <constraint firstItem="CWq-zv-kCJ" firstAttribute="centerX" secondItem="4gP-Eb-4hF" secondAttribute="centerX" constant="-24" id="O76-Aa-dbY"/>
                             <constraint firstItem="cNz-8l-LEk" firstAttribute="top" secondItem="J7K-zY-Io2" secondAttribute="top" id="b9P-Gp-SOf"/>
-                            <constraint firstItem="CWq-zv-kCJ" firstAttribute="leading" secondItem="J7K-zY-Io2" secondAttribute="leading" id="gUB-W1-5Rt"/>
+                            <constraint firstItem="CWq-zv-kCJ" firstAttribute="leading" secondItem="J7K-zY-Io2" secondAttribute="leading" constant="-32" id="gUB-W1-5Rt"/>
                             <constraint firstItem="POR-xY-WjM" firstAttribute="leading" secondItem="J7K-zY-Io2" secondAttribute="leadingMargin" id="oYb-Jd-cXd"/>
-                            <constraint firstItem="CWq-zv-kCJ" firstAttribute="top" secondItem="VQE-Ut-qI7" secondAttribute="top" constant="40" id="qOY-5M-CEM"/>
-                            <constraint firstItem="CWq-zv-kCJ" firstAttribute="leading" secondItem="cNz-8l-LEk" secondAttribute="leading" id="uQD-kN-Bvu"/>
+                            <constraint firstItem="CWq-zv-kCJ" firstAttribute="top" secondItem="VQE-Ut-qI7" secondAttribute="top" constant="-65" id="qOY-5M-CEM"/>
+                            <constraint firstItem="CWq-zv-kCJ" firstAttribute="leading" secondItem="cNz-8l-LEk" secondAttribute="leading" constant="-32" id="uQD-kN-Bvu"/>
                             <constraint firstItem="cNz-8l-LEk" firstAttribute="bottom" secondItem="VQE-Ut-qI7" secondAttribute="bottom" id="w6n-tb-EHV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VQE-Ut-qI7"/>
@@ -295,13 +298,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w51-Gb-bOB">
-                                <rect key="frame" x="145" y="589" width="85" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rulebackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="9b0-QY-U4w">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9b0-QY-U4w" firstAttribute="leading" secondItem="bqa-Vx-bye" secondAttribute="leading" id="3SE-Pc-iQt"/>
+                            <constraint firstItem="9b0-QY-U4w" firstAttribute="top" secondItem="bqa-Vx-bye" secondAttribute="top" id="4Uz-op-y1U"/>
+                            <constraint firstAttribute="trailing" secondItem="9b0-QY-U4w" secondAttribute="trailing" id="NOc-rI-jcx"/>
+                            <constraint firstItem="9b0-QY-U4w" firstAttribute="bottom" secondItem="tz1-Rk-5Xf" secondAttribute="bottom" id="r8I-cy-mAM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="tz1-Rk-5Xf"/>
                     </view>
                 </viewController>
@@ -317,14 +324,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EcY-2F-g14">
-                                <rect key="frame" x="27" y="117" width="321" height="319"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rulebackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="i0c-2h-5ia">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EcY-2F-g14">
+                                <rect key="frame" x="8" y="209" width="359" height="309"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KN4-Dx-C6C">
+                                <rect key="frame" x="251" y="20" width="116" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                <state key="normal" title="SKIP" image="skip.png">
+                                    <color key="titleColor" red="0.21278223395347595" green="0.41565114259719849" blue="0.082129962742328644" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="t5Q-ar-knk" kind="show" id="5Y7-y9-u5E"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMw-va-LDu">
+                                <rect key="frame" x="16" y="108" width="343" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="hhu-PH-PX8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="45"/>
+                                <color key="textColor" red="0.66799789669999998" green="0.14423757979999999" blue="0.13649501989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EcY-2F-g14" firstAttribute="top" secondItem="zMw-va-LDu" secondAttribute="bottom" constant="27" id="2UG-Ih-xZB"/>
+                            <constraint firstItem="i0c-2h-5ia" firstAttribute="leading" secondItem="EcY-2F-g14" secondAttribute="leading" constant="-8" id="3lK-vI-0Vq"/>
+                            <constraint firstItem="i0c-2h-5ia" firstAttribute="trailing" secondItem="EcY-2F-g14" secondAttribute="trailing" constant="8" id="6bd-QH-8qn"/>
+                            <constraint firstItem="JoW-vh-0Ka" firstAttribute="bottom" secondItem="EcY-2F-g14" secondAttribute="bottom" constant="149" id="E74-NK-wxR"/>
+                            <constraint firstItem="zMw-va-LDu" firstAttribute="leading" secondItem="JoW-vh-0Ka" secondAttribute="leading" constant="16" id="K9d-0L-MGv"/>
+                            <constraint firstItem="zMw-va-LDu" firstAttribute="centerX" secondItem="EcY-2F-g14" secondAttribute="centerX" id="Pdf-aZ-Tos"/>
+                            <constraint firstItem="i0c-2h-5ia" firstAttribute="leading" secondItem="wR6-S1-sFB" secondAttribute="leading" id="RtX-3a-umt"/>
+                            <constraint firstItem="i0c-2h-5ia" firstAttribute="top" secondItem="wR6-S1-sFB" secondAttribute="top" id="UdN-al-aHZ"/>
+                            <constraint firstItem="i0c-2h-5ia" firstAttribute="bottom" secondItem="JoW-vh-0Ka" secondAttribute="bottom" id="fUJ-x8-0bI"/>
+                            <constraint firstAttribute="trailing" secondItem="i0c-2h-5ia" secondAttribute="trailing" id="hKf-97-dvT"/>
+                            <constraint firstItem="zMw-va-LDu" firstAttribute="top" secondItem="JoW-vh-0Ka" secondAttribute="top" constant="88" id="mK1-YB-Zwy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="JoW-vh-0Ka"/>
                     </view>
+                    <connections>
+                        <outlet property="Ruleimage" destination="EcY-2F-g14" id="rrU-fl-HWj"/>
+                        <outlet property="Rulelabel" destination="zMw-va-LDu" id="QUO-ou-prN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w9y-DG-FOp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -374,7 +420,9 @@
         <image name="bestscore32.png" width="32" height="32"/>
         <image name="help50.png" width="48" height="48"/>
         <image name="play100.png" width="100" height="100"/>
-        <image name="titleimage.png" width="1060" height="486"/>
+        <image name="rulebackground.png" width="482" height="870"/>
+        <image name="skip.png" width="50" height="50"/>
+        <image name="titleimage1.png" width="1218" height="886"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Eao-3k-MH2"/>

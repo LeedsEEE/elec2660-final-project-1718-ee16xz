@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GamerulePageContentViewController.h"
 
-@interface GameruleRootViewController : UIViewController
+@interface GameruleRootViewController : UIViewController<UIPageViewControllerDataSource>
+
+@property (nonatomic,strong) UIPageViewController *pageviewcontroller;
+@property (nonatomic,strong) NSArray *ruleimagearray;
+@property (nonatomic,strong) NSArray *ruletextarray;
+
+- (GamerulePageContentViewController *)viewcontrolleratindex:(NSUInteger)index;
+
+
 
 @end
