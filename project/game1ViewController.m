@@ -19,7 +19,7 @@
     [super viewDidLoad];
     
     //change the height of progress bar
-    [self.progressview setTransform:CGAffineTransformMakeScale(1.0, 3.0)];
+    [self.progressview setTransform:CGAffineTransformMakeScale(1.0, 4.0)];
     
     // set the time limit of the game: 30s
     self.runtime = 30;
@@ -393,8 +393,7 @@
 //timer method
 -(void) timerfire:(NSTimer *)timer{
     self.runtime --;
-    self.timerlabel.text = [NSString stringWithFormat:@"%ld",_runtime];
-   
+
     // set the progress view which indicates the runtime
     self.progressview.progress = (30-_runtime)/30.0f;
     
