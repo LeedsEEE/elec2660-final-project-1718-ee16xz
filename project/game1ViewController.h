@@ -15,11 +15,6 @@
 
 @property (strong,nonatomic) information *data;
 
-@property NSInteger correcttimes;
-@property NSInteger wrongtimes;
-@property NSInteger totaltimes;
-@property float accuracy;
-
 @property (weak, nonatomic) IBOutlet UIProgressView *progressview;
 @property (weak, nonatomic) IBOutlet UIButton *buttona;
 @property (weak, nonatomic) IBOutlet UIButton *buttonb;
@@ -38,16 +33,22 @@
 - (IBAction)answerC:(id)sender;
 - (IBAction)answerD:(id)sender;
 
-@property (strong,nonatomic) AVAudioPlayer *check;
-
-@property (strong,nonatomic) NSTimer *timer;
-@property NSInteger runtime;
-
 @property (strong,nonatomic) NSMutableArray *answerarray;
 @property NSString * titlea;
 @property NSString * titleb;
 @property NSString * titlec;
 @property NSString * titled;
+
+@property NSInteger correcttimes;
+@property NSInteger wrongtimes;
+@property NSInteger totaltimes;
+@property float accuracy;
+
+@property (strong,nonatomic) AVAudioPlayer *check;
+
+@property (strong,nonatomic) NSTimer *timer;
+@property NSInteger runtime;
+
 
 @property (nonatomic)NSUInteger value;
 -(unsigned long)value;

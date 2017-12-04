@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "information.h"
 #import <AVFoundation/AVFoundation.h>
+#import "game2ViewController.h"
 @interface easymodegameViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UIProgressView *progressview1;
 @property (weak, nonatomic) IBOutlet UILabel *label1;
 @property (weak, nonatomic) IBOutlet UILabel *label2;
 @property (weak, nonatomic) IBOutlet UIButton *rememberbuttonpressed;
@@ -31,6 +34,11 @@
 @property NSString * title2;
 @property NSString * title3;
 @property NSString * title4;
+
+@property NSInteger correcttimes;
+@property NSInteger wrongtimes;
+@property NSInteger totaltimes;
+@property float accuracy;
 
 @property (strong,nonatomic) AVAudioPlayer *checkanswer;
 @property (strong,nonatomic) NSTimer *timer1;

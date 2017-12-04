@@ -21,6 +21,13 @@
     self.rightlabel.text = self.right;
     self.wronglabel.text = self.wrong;
     self.accuracylabel.text = self.accuracy;
+    
+    NSInteger firstrecord = [self.rightlabel.text integerValue];
+    if ([self.rightlabel.text integerValue] > firstrecord) {
+        NSLog(@"%ld",[self.rightlabel.text integerValue]);
+    }
+    
+
 }
 
 - (void)didReceiveMemoryWarning {

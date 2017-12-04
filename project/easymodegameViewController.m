@@ -18,6 +18,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    //change the height of progress bar
+    [self.progressview1 setTransform:CGAffineTransformMakeScale(1.0, 4.0)];
+    
+    //set the all results to 0 first
+    self.totaltimes = 0;
+    self.correcttimes = 0;
+    self.wrongtimes = 0;
+    self.accuracy = 0;
+    
     // set the time limit of the game: 30s
      self.runtime1 = 30;
     // create the timer - timeinterval: count every 1s;
@@ -107,6 +116,8 @@
     NSInteger bA = [[NSString stringWithFormat:@"%ld",self.rightvalue] integerValue];
     if(ba == bA){
         NSLog(@"button a is correct answer");
+        self.correcttimes ++;
+        self.correcttimes = self.correcttimes;
         
         // display the sound if choose the right answer
         //if the sound is already playing,stop it first
@@ -117,6 +128,8 @@
         [self.checkanswer play];
         
     }else{
+        self.wrongtimes ++;
+        self.wrongtimes = self.wrongtimes;
         NSLog(@"button a is incorrect");
     }
     
@@ -140,6 +153,8 @@
     NSInteger bB = [[NSString stringWithFormat:@"%ld",self.rightvalue] integerValue];
     if(bb == bB){
         NSLog(@"button b is correct answer");
+        self.correcttimes ++;
+        self.correcttimes = self.correcttimes;
         
         // display the sound if choose the right answer
         //if the sound is already playing,stop it first
@@ -150,6 +165,8 @@
         [self.checkanswer play];
     }else{
         NSLog(@"button b is incorrect");
+        self.wrongtimes ++;
+        self.wrongtimes = self.wrongtimes;
     }
     
     //when the answer button is pressed, two labels and the remember button appear
@@ -172,6 +189,8 @@
     NSInteger bC = [[NSString stringWithFormat:@"%ld",self.rightvalue] integerValue];
     if(bc == bC){
         NSLog(@"button c is correct answer");
+        self.correcttimes ++;
+        self.correcttimes = self.correcttimes;
         
         // display the sound if choose the right answer
         //if the sound is already playing,stop it first
@@ -182,6 +201,8 @@
         [self.checkanswer play];
     }else{
         NSLog(@"button c is incorrect");
+        self.wrongtimes ++;
+        self.wrongtimes = self.wrongtimes;
     }
     
     //when the answer button is pressed, two labels and the remember button appear
@@ -204,6 +225,8 @@
     NSInteger bD = [[NSString stringWithFormat:@"%ld",self.rightvalue] integerValue];
     if(bd == bD){
         NSLog(@"button d is correct answer");
+        self.correcttimes ++;
+        self.correcttimes = self.correcttimes;
         
         // display the sound if choose the right answer
         //if the sound is already playing,stop it first
@@ -214,6 +237,8 @@
         [self.checkanswer play];
     }else{
         NSLog(@"button d is incorrect");
+        self.wrongtimes ++;
+        self.wrongtimes = self.wrongtimes;
     }
     
     //when the answer button is pressed, two labels and the remember button appear
@@ -290,7 +315,7 @@
     self.runtime1 --;
     
     // set the progress view which indicates the runtime
-/*    self.progressview.progress = (30-_runtime1)/30.0f;*/
+  self.progressview1.progress = (30-_runtime1)/30.0f;
     
     NSLog(@"%ld",self.runtime1);
     
@@ -298,7 +323,7 @@
         [timer1 invalidate];
         NSLog(@"timer stop");
         //when the timer is stopped, goes to the next view controller
-        /*[self performSegueWithIdentifier:@"showresults" sender:nil];*/
+        [self performSegueWithIdentifier:@"SHOWRESULTS" sender:nil];
     }
 }
 
@@ -312,13 +337,24 @@
     [self.checkanswer prepareToPlay];
 }
 
-/*
+
  #pragma mark - Navigation
- 
  // In a storyboard-based application, you will often want to do a little preparation before navigation
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
  // Get the new view controller using [segue destinationViewController].
  // Pass the selected object to the new view controller.
+     self.totaltimes = self.correcttimes + self.wrongtimes;
+     if (self.totaltimes == 0){
+         self.accuracy = 0.0;
+     }else{
+         self.accuracy = (((float)self.correcttimes) / ((float)self.totaltimes))*100.00;
+     }
+     
+     game2ViewController *g2 = [segue destinationViewController];
+     g2.right = [NSString stringWithFormat:@"%ld",self.correcttimes];
+     g2.wrong = [NSString stringWithFormat:@"%ld",self.wrongtimes];
+     g2.total = [NSString stringWithFormat:@"%ld",self.totaltimes];
+     g2.accuracy = [NSString stringWithFormat:@"%.2f",self.accuracy];
  }
- */
+ 
 @end
