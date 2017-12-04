@@ -22,13 +22,11 @@
     self.wronglabel.text = self.wrong;
     self.accuracylabel.text = self.accuracy;
     
-    NSInteger firstrecord = [self.rightlabel.text integerValue];
-    if ([self.rightlabel.text integerValue] > firstrecord) {
-        NSLog(@"%ld",[self.rightlabel.text integerValue]);
-    }
-    
-
+    datarecord *data = [datarecord sharedInstance];
+    [data setScore:[NSString stringWithFormat:@"%@",self.right]];
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -17,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    datarecord *data = [datarecord sharedInstance];
+    
+    self.scorelabel.text = [data score];
 }
 
 - (void)didReceiveMemoryWarning {

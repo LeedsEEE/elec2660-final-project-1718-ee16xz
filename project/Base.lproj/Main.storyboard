@@ -417,6 +417,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VQE-Ut-qI7"/>
                     </view>
+                    <connections>
+                        <outlet property="scorelabel" destination="Cpb-W4-YcQ" id="0k8-IG-EoC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y3N-l5-xPn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

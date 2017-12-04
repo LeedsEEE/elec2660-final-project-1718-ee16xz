@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "datarecord.h"
 @interface EenterViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *scorelabel;
 
 @end

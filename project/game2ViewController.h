@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "game1ViewController.h"
+#import "datarecord.h"
 
 @interface game2ViewController : UIViewController
 
@@ -20,4 +21,6 @@
 @property NSString *wrong;
 @property NSString *total;
 @property NSString *accuracy;
+
+
 @end
