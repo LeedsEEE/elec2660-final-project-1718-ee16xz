@@ -354,10 +354,10 @@
 }
 
 
-   //use the void function to set the label properties
+//use the void function to set the label properties
 - (void)labelproperties{
-    //set text and background of the label  when start the game
-    //one method of setting the initial random backgroundcolor ----use for loop
+    //set text and background of the labels
+    //one method of setting the random backgroundcolor for the labels----use for loop
     for (int color = 0; color <_data.colorarray.count ; color++) {
         int colora = arc4random() %[_data.colorarray count];
         self.firstlabel.backgroundColor = [self.data.colorarray objectAtIndex:colora];
@@ -383,14 +383,14 @@
     NSUInteger texta = arc4random() % 10;
     NSUInteger textb = arc4random() % 10;
     NSUInteger textc = arc4random() % 10;
-    //set the initial text
+    //set the text of the labels
     self.firstlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:texta]];
     self.secondlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:textb]];
     self.thirdlabel.text = [NSString stringWithFormat:@"%@",[self.data.numberarray objectAtIndex:textc]];
 }
 
 
-//timer method
+#pragma mark nstimer
 -(void) timerfire:(NSTimer *)timer{
     self.runtime --;
 
@@ -409,6 +409,7 @@
 }
 
 
+#pragma mark audioplayer
 // learnt how to use audioplayer from the resource provided on the vle (the tutorial given by Dr Evans)
 -(void) audioplayer {
     NSString *filepath = [[NSBundle mainBundle] pathForResource:@"2" ofType:@"wav"];

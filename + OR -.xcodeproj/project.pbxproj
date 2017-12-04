@@ -20,10 +20,8 @@
 		186B87A11FD34975003C2C0B /* GamerulePageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186B87A01FD34975003C2C0B /* GamerulePageContentViewController.m */; };
 		18BC8DF91FD1CD63001983B3 /* IMG_2938.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18BC8DF81FD1CCF3001983B3 /* IMG_2938.jpg */; };
 		18BC8E4C1FD20517001983B3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BC8E4B1FD20517001983B3 /* AVFoundation.framework */; };
-		18BC8E571FD21A94001983B3 /* rightanswer.wav in Resources */ = {isa = PBXBuildFile; fileRef = 18BC8E531FD2173F001983B3 /* rightanswer.wav */; };
-		18BC8E581FD21A94001983B3 /* wronganser.wav in Resources */ = {isa = PBXBuildFile; fileRef = 18BC8E541FD2173F001983B3 /* wronganser.wav */; };
 		18BC8E591FD21A94001983B3 /* 2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 18BC8E551FD2173F001983B3 /* 2.wav */; };
-		18BC8E5A1FD21A94001983B3 /* rightanswer1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 18BC8E561FD2173F001983B3 /* rightanswer1.wav */; };
+		18BC8E5A1FD21A94001983B3 /* 1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 18BC8E561FD2173F001983B3 /* 1.wav */; };
 		18C94B7C1FD5937300B80640 /* background2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18C94B7B1FD5931C00B80640 /* background2.jpg */; };
 		18C94B821FD59F9400B80640 /* Rule2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C94B811FD59F8100B80640 /* Rule2.png */; };
 		18C94B831FD59F9400B80640 /* Rule3.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C94B801FD59F1000B80640 /* Rule3.png */; };
@@ -85,10 +83,8 @@
 		18BC8DF71FD1C29C001983B3 /* icon */ = {isa = PBXFileReference; lastKnownFileType = folder; path = icon; sourceTree = "<group>"; };
 		18BC8DF81FD1CCF3001983B3 /* IMG_2938.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2938.jpg; sourceTree = "<group>"; };
 		18BC8E4B1FD20517001983B3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		18BC8E531FD2173F001983B3 /* rightanswer.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rightanswer.wav; sourceTree = "<group>"; };
-		18BC8E541FD2173F001983B3 /* wronganser.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wronganser.wav; sourceTree = "<group>"; };
 		18BC8E551FD2173F001983B3 /* 2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 2.wav; sourceTree = "<group>"; };
-		18BC8E561FD2173F001983B3 /* rightanswer1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = rightanswer1.wav; sourceTree = "<group>"; };
+		18BC8E561FD2173F001983B3 /* 1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 1.wav; sourceTree = "<group>"; };
 		18C94B7B1FD5931C00B80640 /* background2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background2.jpg; sourceTree = "<group>"; };
 		18C94B801FD59F1000B80640 /* Rule3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rule3.png; sourceTree = "<group>"; };
 		18C94B811FD59F8100B80640 /* Rule2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rule2.png; sourceTree = "<group>"; };
@@ -230,10 +226,8 @@
 		18BC8E521FD2173F001983B3 /* audiosample */ = {
 			isa = PBXGroup;
 			children = (
-				18BC8E531FD2173F001983B3 /* rightanswer.wav */,
-				18BC8E541FD2173F001983B3 /* wronganser.wav */,
+				18BC8E561FD2173F001983B3 /* 1.wav */,
 				18BC8E551FD2173F001983B3 /* 2.wav */,
-				18BC8E561FD2173F001983B3 /* rightanswer1.wav */,
 			);
 			path = audiosample;
 			sourceTree = "<group>";
@@ -357,10 +351,8 @@
 				18C94B821FD59F9400B80640 /* Rule2.png in Resources */,
 				18C94B831FD59F9400B80640 /* Rule3.png in Resources */,
 				18C94B7C1FD5937300B80640 /* background2.jpg in Resources */,
-				18BC8E571FD21A94001983B3 /* rightanswer.wav in Resources */,
-				18BC8E581FD21A94001983B3 /* wronganser.wav in Resources */,
 				18BC8E591FD21A94001983B3 /* 2.wav in Resources */,
-				18BC8E5A1FD21A94001983B3 /* rightanswer1.wav in Resources */,
+				18BC8E5A1FD21A94001983B3 /* 1.wav in Resources */,
 				18BC8DF91FD1CD63001983B3 /* IMG_2938.jpg in Resources */,
 				180630541FB06F6C009A27C4 /* LaunchScreen.storyboard in Resources */,
 				180630511FB06F6C009A27C4 /* Assets.xcassets in Resources */,

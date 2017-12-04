@@ -498,7 +498,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w9y-DG-FOp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1697" y="921"/>
+            <point key="canvasLocation" x="-1503" y="921"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="URz-Op-qSE">
@@ -506,7 +506,7 @@
                 <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="XFJ-IV-LGZ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fep-ap-AKD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1215" y="921"/>
+            <point key="canvasLocation" x="-834" y="921"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="V7r-yc-ymP">
@@ -695,7 +695,6 @@
         <image name="titleimage2.png" width="962" height="678"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cUu-TG-X48"/>
         <segue reference="NRw-Tx-Ks4"/>
     </inferredMetricsTieBreakers>
 </document>

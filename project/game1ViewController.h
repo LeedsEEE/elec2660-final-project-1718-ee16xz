@@ -13,17 +13,12 @@
 
 @interface game1ViewController : UIViewController
 
-@property (nonatomic)NSUInteger value;
+@property (strong,nonatomic) information *data;
+
 @property NSInteger correcttimes;
 @property NSInteger wrongtimes;
 @property NSInteger totaltimes;
 @property float accuracy;
-@property (strong,nonatomic) NSMutableArray *answerarray;
-
-@property NSString * titlea;
-@property NSString * titleb;
-@property NSString * titlec;
-@property NSString * titled;
 
 @property (weak, nonatomic) IBOutlet UIProgressView *progressview;
 @property (weak, nonatomic) IBOutlet UIButton *buttona;
@@ -44,10 +39,17 @@
 - (IBAction)answerD:(id)sender;
 
 @property (strong,nonatomic) AVAudioPlayer *check;
-@property (strong,nonatomic) NSTimer *timer;
-@property NSInteger runtime; 
 
-@property (strong,nonatomic) information *data;
+@property (strong,nonatomic) NSTimer *timer;
+@property NSInteger runtime;
+
+@property (strong,nonatomic) NSMutableArray *answerarray;
+@property NSString * titlea;
+@property NSString * titleb;
+@property NSString * titlec;
+@property NSString * titled;
+
+@property (nonatomic)NSUInteger value;
 -(unsigned long)value;
 
 @end

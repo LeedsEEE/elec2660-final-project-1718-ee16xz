@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "information.h"
-
+#import <AVFoundation/AVFoundation.h>
 @interface easymodegameViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *label1;
 @property (weak, nonatomic) IBOutlet UILabel *label2;
@@ -25,4 +25,17 @@
 - (IBAction)answer4:(id)sender;
 
 @property (strong,nonatomic) information *data1;
+
+@property(nonatomic,strong) NSMutableArray *answerarray1;
+@property NSString * title1;
+@property NSString * title2;
+@property NSString * title3;
+@property NSString * title4;
+
+@property (strong,nonatomic) AVAudioPlayer *checkanswer;
+@property (strong,nonatomic) NSTimer *timer1;
+@property NSInteger runtime1;
+
+@property (nonatomic) NSUInteger rightvalue;
+-(unsigned long)rightvalue;
 @end
