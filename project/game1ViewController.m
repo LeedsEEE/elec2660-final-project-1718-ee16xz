@@ -21,8 +21,8 @@
     //change the height of progress bar
     [self.progressview setTransform:CGAffineTransformMakeScale(1.0, 4.0)];
     
-    // set the time limit of the game: 30s
-    self.runtime = 30;
+    // set the time limit of the game: 20s
+    self.runtime = 20;
     // create the timer - timeinterval: count every 1s;
     //                    target:timer self;
     //                    selector:the message to send to target when the timer fires
@@ -395,7 +395,7 @@
     self.runtime --;
 
     // set the progress view which indicates the runtime
-    self.progressview.progress = (30-_runtime)/30.0f;
+    self.progressview.progress = (20-_runtime)/20.0f;
     
     
     if (self.runtime == 0) {

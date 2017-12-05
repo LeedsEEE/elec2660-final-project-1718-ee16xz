@@ -11,9 +11,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="AcademyEngraved.ttf">
-            <string>AcademyEngravedLetPlain</string>
-        </array>
         <array key="Chalkduster.ttf">
             <string>Chalkduster</string>
         </array>
@@ -22,7 +19,6 @@
         <!--Easymodegame View Controller-->
         <scene sceneID="Nqw-0s-KeK">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="I71-gn-vrb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="MFS-08-aIn" customClass="easymodegameViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gZg-SB-hjr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -116,6 +112,7 @@
                         <segue destination="Nup-HR-S3E" kind="show" identifier="SHOWRESULTS" id="u4H-K8-Wdv"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I71-gn-vrb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="288.80000000000001" y="-403.44827586206901"/>
         </scene>
@@ -256,72 +253,105 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RIGHT:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="doc-1N-ygn">
-                                <rect key="frame" x="45" y="134" width="65" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wrong:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEQ-jO-MKc">
+                                <rect key="frame" x="30" y="304" width="171" height="69"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="45"/>
+                                <color key="textColor" red="0.25794017314910889" green="0.065325118601322174" blue="0.034829340875148773" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WRONG:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEQ-jO-MKc">
-                                <rect key="frame" x="45" y="219" width="69" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accuracy:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlE-aG-fov">
+                                <rect key="frame" x="30" y="421" width="252" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="6kR-Ea-ieQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="45"/>
+                                <color key="textColor" red="0.935494065284729" green="0.66974955797195435" blue="0.28970742225646973" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ACCURACY:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlE-aG-fov">
-                                <rect key="frame" x="45" y="305" width="94" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81N-eV-DO9">
+                                <rect key="frame" x="209" y="306" width="150" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="whb-so-eb6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="55"/>
+                                <color key="textColor" red="0.935494065284729" green="0.66974955797195435" blue="0.28970742225646973" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TOTAL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGx-VH-K7K">
-                                <rect key="frame" x="43" y="50" width="69" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXt-BJ-eKn">
-                                <rect key="frame" x="160" y="50" width="55" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W63-zF-iHw">
-                                <rect key="frame" x="160" y="133" width="55" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81N-eV-DO9">
-                                <rect key="frame" x="160" y="219" width="55" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k56-Q5-rd6">
-                                <rect key="frame" x="160" y="305" width="55" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Szg-q9-uFQ">
-                                <rect key="frame" x="215" y="401" width="110" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="RESTART"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Szg-q9-uFQ">
+                                <rect key="frame" x="152" y="560" width="70" height="70"/>
+                                <state key="normal" image="restartbutton.png"/>
                                 <connections>
                                     <segue destination="t5Q-ar-knk" kind="show" id="EeI-IK-3Rq"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="right" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W63-zF-iHw">
+                                <rect key="frame" x="197" y="193" width="149" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="f7T-Ma-Xj3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="55"/>
+                                <color key="textColor" red="0.26982444524765015" green="0.069165840744972229" blue="0.038345709443092346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2o-gD-d5F">
+                                <rect key="frame" x="30" y="78" width="152" height="64"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="46"/>
+                                <color key="textColor" red="0.26982444524765015" green="0.069165840744972229" blue="0.038345709443092346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Right:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exp-Ph-n7t">
+                                <rect key="frame" x="30" y="191" width="150" height="64"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="46"/>
+                                <color key="textColor" red="0.935494065284729" green="0.66974955797195435" blue="0.28970742225646973" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="total" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXt-BJ-eKn">
+                                <rect key="frame" x="197" y="81" width="149" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="Wwx-zY-dyC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="55"/>
+                                <color key="textColor" red="0.935494065284729" green="0.66974955797195435" blue="0.28970742225646973" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="accuracy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k56-Q5-rd6">
+                                <rect key="frame" x="59" y="483" width="257" height="64"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="50"/>
+                                <color key="textColor" red="0.26585400104522705" green="0.069225095212459564" blue="0.038601025938987732" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.96502476930000003" green="0.95820420979999998" blue="0.87889462709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Szg-q9-uFQ" firstAttribute="centerX" secondItem="zEX-CV-DEc" secondAttribute="centerX" id="24e-a9-LPT"/>
+                            <constraint firstItem="WIQ-iz-4Dl" firstAttribute="trailing" secondItem="jlE-aG-fov" secondAttribute="trailing" constant="93" id="49v-re-rfp"/>
+                            <constraint firstItem="fXt-BJ-eKn" firstAttribute="top" secondItem="WIQ-iz-4Dl" secondAttribute="top" constant="61" id="CAw-sd-XuI"/>
+                            <constraint firstItem="TEQ-jO-MKc" firstAttribute="top" secondItem="exp-Ph-n7t" secondAttribute="bottom" constant="49" id="EG6-47-LXY"/>
+                            <constraint firstItem="k56-Q5-rd6" firstAttribute="centerX" secondItem="Szg-q9-uFQ" secondAttribute="centerX" id="FaC-X5-6oA"/>
+                            <constraint firstItem="j2o-gD-d5F" firstAttribute="top" secondItem="WIQ-iz-4Dl" secondAttribute="top" constant="58" id="Fdw-4E-RgZ"/>
+                            <constraint firstItem="exp-Ph-n7t" firstAttribute="top" secondItem="j2o-gD-d5F" secondAttribute="bottom" constant="49" id="FmF-2P-UZ3"/>
+                            <constraint firstItem="Szg-q9-uFQ" firstAttribute="top" secondItem="jlE-aG-fov" secondAttribute="bottom" constant="75" id="FsU-xr-JHp"/>
+                            <constraint firstItem="fXt-BJ-eKn" firstAttribute="trailing" secondItem="W63-zF-iHw" secondAttribute="trailing" id="Gud-mV-2eW"/>
+                            <constraint firstItem="fXt-BJ-eKn" firstAttribute="leading" secondItem="j2o-gD-d5F" secondAttribute="trailing" constant="15" id="JYc-2D-64d"/>
+                            <constraint firstItem="TEQ-jO-MKc" firstAttribute="top" secondItem="W63-zF-iHw" secondAttribute="bottom" constant="50" id="Kzw-xE-1tM"/>
+                            <constraint firstItem="W63-zF-iHw" firstAttribute="leading" secondItem="exp-Ph-n7t" secondAttribute="trailing" constant="17" id="RxE-sr-KgE"/>
+                            <constraint firstItem="TEQ-jO-MKc" firstAttribute="bottom" secondItem="81N-eV-DO9" secondAttribute="bottom" id="SnO-T8-obD"/>
+                            <constraint firstItem="Szg-q9-uFQ" firstAttribute="leading" secondItem="WIQ-iz-4Dl" secondAttribute="leading" constant="152" id="SuL-2z-oKc"/>
+                            <constraint firstItem="WIQ-iz-4Dl" firstAttribute="bottom" secondItem="Szg-q9-uFQ" secondAttribute="bottom" constant="37" id="U3E-iC-VLe"/>
+                            <constraint firstItem="j2o-gD-d5F" firstAttribute="centerY" secondItem="fXt-BJ-eKn" secondAttribute="centerY" id="UwC-I4-Nb1"/>
+                            <constraint firstItem="TEQ-jO-MKc" firstAttribute="leading" secondItem="jlE-aG-fov" secondAttribute="leading" id="VPm-Uy-xr4"/>
+                            <constraint firstItem="exp-Ph-n7t" firstAttribute="leading" secondItem="TEQ-jO-MKc" secondAttribute="leading" id="Vm1-OV-5CZ"/>
+                            <constraint firstItem="exp-Ph-n7t" firstAttribute="centerY" secondItem="W63-zF-iHw" secondAttribute="centerY" id="Xa3-yr-rOu"/>
+                            <constraint firstItem="k56-Q5-rd6" firstAttribute="leading" secondItem="WIQ-iz-4Dl" secondAttribute="leading" constant="59" id="bZu-gt-Fzq"/>
+                            <constraint firstItem="jlE-aG-fov" firstAttribute="top" secondItem="TEQ-jO-MKc" secondAttribute="bottom" constant="48" id="dUR-Kj-gYo"/>
+                            <constraint firstItem="81N-eV-DO9" firstAttribute="top" secondItem="W63-zF-iHw" secondAttribute="bottom" constant="52" id="fos-fq-5Cp"/>
+                            <constraint firstItem="81N-eV-DO9" firstAttribute="leading" secondItem="TEQ-jO-MKc" secondAttribute="trailing" constant="8" symbolic="YES" id="mJm-TJ-EeL"/>
+                            <constraint firstItem="fXt-BJ-eKn" firstAttribute="leading" secondItem="W63-zF-iHw" secondAttribute="leading" id="oU7-MJ-KG2"/>
+                            <constraint firstItem="Szg-q9-uFQ" firstAttribute="top" secondItem="k56-Q5-rd6" secondAttribute="bottom" constant="13" id="p3H-hm-IXy"/>
+                            <constraint firstItem="81N-eV-DO9" firstAttribute="trailing" secondItem="zEX-CV-DEc" secondAttribute="trailingMargin" id="vOn-rQ-YK6"/>
+                            <constraint firstItem="j2o-gD-d5F" firstAttribute="leading" secondItem="exp-Ph-n7t" secondAttribute="leading" id="wAe-hf-z0T"/>
+                            <constraint firstItem="TEQ-jO-MKc" firstAttribute="baseline" secondItem="81N-eV-DO9" secondAttribute="firstBaseline" id="xn7-ob-4lz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="WIQ-iz-4Dl"/>
                     </view>
                     <connections>
@@ -333,7 +363,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6N0-Sg-pPi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1273" y="25"/>
+            <point key="canvasLocation" x="1272.5" y="24.5"/>
         </scene>
         <!--Eenter View Controller-->
         <scene sceneID="cVU-Ax-6fX">
@@ -363,56 +393,56 @@
                                     <segue destination="n8b-S8-dqB" kind="show" id="tZ7-ae-sza"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no.1image.png" translatesAutoresizingMaskIntoConstraints="NO" id="fPP-7l-4A6">
-                                <rect key="frame" x="37" y="304" width="32" height="32"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightimage.png" translatesAutoresizingMaskIntoConstraints="NO" id="fPP-7l-4A6">
+                                <rect key="frame" x="26" y="286" width="65" height="51"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="Hrf-cQ-aDL"/>
+                                    <constraint firstAttribute="height" constant="51" id="Hrf-cQ-aDL"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cpb-W4-YcQ">
-                                <rect key="frame" x="154" y="389" width="66" height="54"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="54" id="Vvl-q1-L11"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titleimage2.png" translatesAutoresizingMaskIntoConstraints="NO" id="CWq-zv-kCJ">
                                 <rect key="frame" x="0.0" y="-24" width="375" height="278"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="278" id="UUc-Sj-0Ax"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best Score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CcD-jz-gd5">
-                                <rect key="frame" x="58" y="314" width="257" height="67"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CcD-jz-gd5">
+                                <rect key="frame" x="65" y="311" width="214" height="77"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="67" id="LTB-C7-sXb"/>
+                                    <constraint firstAttribute="height" constant="77" id="LTB-C7-sXb"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="50"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="60"/>
                                 <color key="textColor" red="0.4741115058685279" green="0.26418207475962929" blue="0.0009807719714887953" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cpb-W4-YcQ">
+                                <rect key="frame" x="90" y="380" width="194" height="77"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="Vvl-q1-L11"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="55"/>
+                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.96502476930000003" green="0.95820420979999998" blue="0.87889462709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="4gP-Eb-4hF" firstAttribute="top" secondItem="Cpb-W4-YcQ" secondAttribute="bottom" constant="66" id="2MO-og-UuO"/>
+                            <constraint firstItem="4gP-Eb-4hF" firstAttribute="top" secondItem="Cpb-W4-YcQ" secondAttribute="bottom" constant="52" id="2MO-og-UuO"/>
                             <constraint firstAttribute="trailing" secondItem="CWq-zv-kCJ" secondAttribute="trailing" id="3Ov-ua-GGq"/>
                             <constraint firstItem="VQE-Ut-qI7" firstAttribute="bottom" secondItem="4gP-Eb-4hF" secondAttribute="bottom" constant="44" id="ABz-8S-x9H"/>
-                            <constraint firstItem="fPP-7l-4A6" firstAttribute="leading" secondItem="VQE-Ut-qI7" secondAttribute="leading" constant="37" id="IeA-Qd-xF9"/>
+                            <constraint firstItem="fPP-7l-4A6" firstAttribute="leading" secondItem="VQE-Ut-qI7" secondAttribute="leading" constant="26" id="IeA-Qd-xF9"/>
                             <constraint firstItem="VQE-Ut-qI7" firstAttribute="trailing" secondItem="4gP-Eb-4hF" secondAttribute="trailing" constant="132" id="Ii2-yz-JcM"/>
-                            <constraint firstItem="CWq-zv-kCJ" firstAttribute="centerX" secondItem="Cpb-W4-YcQ" secondAttribute="centerX" id="LDC-zf-sbM"/>
-                            <constraint firstItem="fPP-7l-4A6" firstAttribute="top" secondItem="CWq-zv-kCJ" secondAttribute="bottom" constant="50" id="Lvs-Cg-ptT"/>
+                            <constraint firstItem="CWq-zv-kCJ" firstAttribute="centerX" secondItem="Cpb-W4-YcQ" secondAttribute="centerX" constant="0.5" id="LDC-zf-sbM"/>
+                            <constraint firstItem="fPP-7l-4A6" firstAttribute="top" secondItem="CWq-zv-kCJ" secondAttribute="bottom" constant="32" id="Lvs-Cg-ptT"/>
                             <constraint firstItem="4gP-Eb-4hF" firstAttribute="leading" secondItem="POR-xY-WjM" secondAttribute="trailing" constant="64" id="Tpo-OI-nZb"/>
-                            <constraint firstItem="CcD-jz-gd5" firstAttribute="top" secondItem="CWq-zv-kCJ" secondAttribute="bottom" constant="60" id="Vsw-a5-f0O"/>
-                            <constraint firstItem="CcD-jz-gd5" firstAttribute="leading" secondItem="VQE-Ut-qI7" secondAttribute="leading" constant="58" id="Yv2-Is-dZ4"/>
+                            <constraint firstItem="CcD-jz-gd5" firstAttribute="top" secondItem="CWq-zv-kCJ" secondAttribute="bottom" constant="57" id="Vsw-a5-f0O"/>
+                            <constraint firstItem="CcD-jz-gd5" firstAttribute="leading" secondItem="VQE-Ut-qI7" secondAttribute="leading" constant="65" id="Yv2-Is-dZ4"/>
                             <constraint firstItem="CWq-zv-kCJ" firstAttribute="top" secondItem="J7K-zY-Io2" secondAttribute="topMargin" constant="-44" id="ZxR-wN-UZp"/>
-                            <constraint firstItem="Cpb-W4-YcQ" firstAttribute="leading" secondItem="VQE-Ut-qI7" secondAttribute="leading" constant="154" id="dEf-dr-RVw"/>
+                            <constraint firstItem="Cpb-W4-YcQ" firstAttribute="leading" secondItem="VQE-Ut-qI7" secondAttribute="leading" constant="90" id="dEf-dr-RVw"/>
                             <constraint firstItem="CWq-zv-kCJ" firstAttribute="leading" secondItem="J7K-zY-Io2" secondAttribute="leading" id="grX-bk-RUc"/>
-                            <constraint firstItem="Cpb-W4-YcQ" firstAttribute="centerX" secondItem="4gP-Eb-4hF" secondAttribute="centerX" id="pzb-WU-Me1"/>
-                            <constraint firstItem="VQE-Ut-qI7" firstAttribute="trailing" secondItem="fPP-7l-4A6" secondAttribute="trailing" constant="306" id="qCm-Mz-54b"/>
+                            <constraint firstItem="Cpb-W4-YcQ" firstAttribute="centerX" secondItem="4gP-Eb-4hF" secondAttribute="centerX" constant="-0.5" id="pzb-WU-Me1"/>
+                            <constraint firstItem="VQE-Ut-qI7" firstAttribute="trailing" secondItem="fPP-7l-4A6" secondAttribute="trailing" constant="284" id="qCm-Mz-54b"/>
                             <constraint firstAttribute="bottom" secondItem="POR-xY-WjM" secondAttribute="bottom" constant="20" symbolic="YES" id="qkp-bw-HVE"/>
-                            <constraint firstItem="VQE-Ut-qI7" firstAttribute="trailing" secondItem="CcD-jz-gd5" secondAttribute="trailing" constant="60" id="wE6-KA-Qi1"/>
+                            <constraint firstItem="VQE-Ut-qI7" firstAttribute="trailing" secondItem="CcD-jz-gd5" secondAttribute="trailing" constant="96" id="wE6-KA-Qi1"/>
                             <constraint firstItem="POR-xY-WjM" firstAttribute="leading" secondItem="J7K-zY-Io2" secondAttribute="leadingMargin" id="yvW-zB-v0g"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VQE-Ut-qI7"/>
@@ -423,7 +453,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y3N-l5-xPn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1400" y="10"/>
+            <point key="canvasLocation" x="-1400.8" y="9.4452773613193415"/>
         </scene>
         <!--Gamerule Root View Controller-->
         <scene sceneID="JeC-ER-rMZ">
@@ -571,14 +601,15 @@
         <image name="close.png" width="48" height="48"/>
         <image name="easybutton.png" width="194" height="86"/>
         <image name="hardbutton.png" width="194" height="86"/>
-        <image name="no.1image.png" width="57" height="56"/>
         <image name="playbutton.png" width="110" height="107"/>
         <image name="rememberbutton.png" width="194" height="64"/>
+        <image name="restartbutton.png" width="74" height="74"/>
+        <image name="rightimage.png" width="93" height="86"/>
         <image name="rulebutton.png" width="43" height="43"/>
         <image name="titleimage2.png" width="962" height="678"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="EeI-IK-3Rq"/>
-        <segue reference="u4H-K8-Wdv"/>
+        <segue reference="cUu-TG-X48"/>
     </inferredMetricsTieBreakers>
 </document>
